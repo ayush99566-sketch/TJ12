@@ -11446,16 +11446,17 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   var VALID = {};
   Object.keys(ROUTES).forEach(function (k) { VALID[ROUTES[k]] = true; });
 
-  // In-page back/forward navigation stack. Kept separate from the browser's
-  // own history (which only gets history.replaceState, never pushState --
-  // see showPage below) so the site's own Back/Forward buttons always move
-  // between pages actually visited on this site, and never step the visitor
-  // out of the page entirely the way the browser's native back button would
-  // once it runs out of same-site history.
+  // Navigation history. Every real page change pushes a browser history
+  // entry (history.pushState with a "#route" URL), so the phone's / browser's
+  // native Back button steps to the previous page of the site instead of
+  // leaving the site. navStack mirrors that so the header Back/Forward
+  // buttons and their disabled state stay in sync.
   var navStack = ['home'];
   var navIndex = 0;
   var navBackBtn = null;
   var navForwardBtn = null;
+  var currentId = 'home';
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
 
   function updateNavButtons() {
     if (navBackBtn) navBackBtn.disabled = navIndex <= 0;
@@ -11465,22 +11466,32 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   function showPage(id, anchorId, opts) {
     if (!VALID[id]) id = 'home';
     opts = opts || {};
+    var leavingY = window.scrollY || 0;
     document.querySelectorAll('.spa-page').forEach(function (p) {
       p.hidden = (p.id !== 'spa-page-' + id);
     });
-    if (!anchorId) {
+    if (!anchorId && !opts.fromPop) {
       window.scrollTo(0, 0);
     }
-    try { history.replaceState(null, '', '#' + id); } catch (e) {}
+    if (!opts.fromPop) {
+      if (opts.initial || id === currentId) {
+        // First load, or re-selecting the page we are already on: no new entry.
+        try { history.replaceState({ tv: id, y: 0 }, '', '#' + id); } catch (e) {}
+      } else {
+        // Remember where the visitor was on the page they are leaving, so Back
+        // returns them to the same spot, then add an entry for the new page.
+        try { history.replaceState({ tv: currentId, y: leavingY }, '', '#' + currentId); } catch (e) {}
+        try { history.pushState({ tv: id, y: 0 }, '', '#' + id); } catch (e) {}
+      }
+    }
+    currentId = id;
     if (anchorId) {
       var el = document.getElementById(anchorId) || document.getElementById(id + '-' + anchorId);
       if (el) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 30);
     }
-    if (!opts.fromNavButton) {
-      // A real navigation (link click / initial load), not our own Back/
-      // Forward button acting on the existing stack: record it, dropping
-      // any "forward" entries past the current point (same behavior as a
-      // normal browser history stack).
+    if (!opts.fromPop && !opts.initial) {
+      // A real navigation: record it, dropping "forward" entries past the
+      // current point (same as a normal browser history stack).
       if (navStack[navIndex] !== id) {
         navStack = navStack.slice(0, navIndex + 1);
         navStack.push(id);
@@ -11489,6 +11500,20 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     }
     updateNavButtons();
   }
+
+  // Browser / phone Back and Forward: show the page recorded for that entry.
+  window.addEventListener('popstate', function (e) {
+    var id = (e.state && e.state.tv) || (location.hash || '#home').slice(1);
+    if (!VALID[id]) id = 'home';
+    if (navStack[navIndex - 1] === id) navIndex -= 1;
+    else if (navStack[navIndex + 1] === id) navIndex += 1;
+    else { navStack = [id]; navIndex = 0; }
+    showPage(id, null, { fromPop: true });
+    var y = (e.state && e.state.y) || 0;
+    window.scrollTo(0, y);
+    // Pages can finish laying out a moment later (images, tabs); re-apply once.
+    if (y) setTimeout(function () { window.scrollTo(0, y); }, 60);
+  });
   window.__tvShowPage = showPage;
 
   document.addEventListener('click', function (e) {
@@ -11536,15 +11561,13 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   if (navBackBtn) {
     navBackBtn.addEventListener('click', function () {
       if (navIndex <= 0) return;
-      navIndex -= 1;
-      showPage(navStack[navIndex], null, { fromNavButton: true });
+      history.back();
     });
   }
   if (navForwardBtn) {
     navForwardBtn.addEventListener('click', function () {
       if (navIndex >= navStack.length - 1) return;
-      navIndex += 1;
-      showPage(navStack[navIndex], null, { fromNavButton: true });
+      history.forward();
     });
   }
   updateNavButtons();
@@ -11619,7 +11642,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   var initialId = VALID[initial] ? initial : 'home';
   navStack = [initialId];
   navIndex = 0;
-  showPage(initialId, null, { fromNavButton: true });
+  showPage(initialId, null, { initial: true });
 })();
 </script>
 
