@@ -3828,6 +3828,185 @@ button {
 .tour-photo-credits p{margin:0;font-size:.78rem;line-height:1.55;color:#7a7a7a;max-width:1100px}
 .tour-photo-credits strong{color:#555}
 
+/* ================= Homepage "Find Your Journey" region showcase ================= */
+.journeys__head { text-align: center; margin-bottom: 28px; }
+.journeys__title { font-size: clamp(30px, 4vw, 46px); margin: 8px 0 10px; }
+.journeys__sub { font-family: var(--font-body); color: var(--color-gray-text); max-width: 560px; margin: 0 auto; line-height: 1.55; }
+
+.journeys__tabs {
+  display: flex; justify-content: center; gap: 8px; margin: 0 auto 28px;
+  padding: 6px; width: fit-content; max-width: 100%;
+  background: var(--color-white); border-radius: 999px;
+  box-shadow: 0 10px 30px -18px rgba(29, 55, 38, 0.45), 0 0 0 1px rgba(29, 55, 38, 0.06);
+}
+.journeys__tab {
+  display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; cursor: pointer;
+  font-family: var(--font-nav); font-size: 14px; font-weight: 500; color: var(--color-sage-dark);
+  background: transparent; border: 0; border-radius: 999px; padding: 11px 20px;
+  transition: background .25s ease, color .25s ease;
+}
+.journeys__tab:hover { background: var(--color-sage-soft); }
+.journeys__tab:focus-visible { outline: 2px solid var(--color-orange); outline-offset: 2px; }
+.journeys__tab.is-active { background: var(--color-sage-dark); color: var(--color-white); }
+.journeys__panel[hidden] { display: none; }
+.journeys__panel.is-active { animation: journeyFade .45s cubic-bezier(.16, 1, .3, 1); }
+@keyframes journeyFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.journeys__blurb { text-align: center; font-family: var(--font-body); color: var(--color-gray-text); margin: 0 auto 22px; max-width: 620px; line-height: 1.55; }
+
+.journeys__layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; align-items: stretch; }
+
+.journey-lead {
+  position: relative; display: block; min-height: 460px; border-radius: 18px; overflow: hidden;
+  color: var(--color-white); text-decoration: none; isolation: isolate;
+  box-shadow: 0 24px 50px -26px rgba(0, 0, 0, 0.55);
+}
+.journey-lead img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.16, 1, .3, 1); z-index: -2; }
+.journey-lead:hover img { transform: scale(1.05); }
+.journey-lead__scrim { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,.06) 20%, rgba(0,0,0,.5) 55%, rgba(0,0,0,.86) 100%); }
+.journey-lead__badge {
+  position: absolute; top: 18px; left: 18px; font-family: var(--font-heading); font-weight: 700; font-size: 12px;
+  padding: 6px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.9); color: var(--color-sage-dark);
+}
+.journey-lead__body { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px; display: flex; flex-direction: column; gap: 8px; }
+.journey-lead__eyebrow { text-shadow: 0 1px 8px rgba(0,0,0,.45); font-family: var(--font-nav); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--color-orange); }
+.journey-lead__title { font-family: var(--font-heading); font-weight: 700; font-size: clamp(26px, 3vw, 38px); line-height: 1.12; }
+.journey-lead__tagline { font-family: var(--font-body); font-size: 16px; line-height: 1.45; color: rgba(255, 255, 255, .88); max-width: 520px; }
+.journey-lead__meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; font-family: var(--font-nav); font-size: 14px; }
+.journey-lead__meta > span:first-child { padding: 7px 14px; border-radius: 999px; background: rgba(255, 255, 255, .16); backdrop-filter: blur(6px); }
+.journey-lead__cta { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.journey-lead__cta svg, .journey-row__go svg, .journeys__regionlink svg { width: 18px; height: 18px; transition: transform .25s ease; }
+.journey-lead:hover .journey-lead__cta svg { transform: translateX(5px); }
+
+.journeys__list { display: grid; grid-auto-rows: 1fr; gap: 14px; }
+.journey-row {
+  display: grid; grid-template-columns: 140px 1fr auto; align-items: stretch; gap: 16px; min-height: 120px;
+  padding: 10px 16px 10px 10px; background: var(--color-white); border-radius: 16px; text-decoration: none; color: inherit;
+  box-shadow: 0 12px 28px -20px rgba(29, 55, 38, .55), 0 0 0 1px rgba(29, 55, 38, .05);
+  transition: transform .3s cubic-bezier(.16, 1, .3, 1), box-shadow .3s ease;
+}
+.journey-row:hover { transform: translateY(-3px); box-shadow: 0 20px 36px -20px rgba(29, 55, 38, .6), 0 0 0 1px rgba(29, 55, 38, .08); }
+.journey-row__thumb { display: block; border-radius: 11px; overflow: hidden; }
+.journey-row__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+.journey-row:hover .journey-row__thumb img { transform: scale(1.08); }
+.journey-row__text { display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0; }
+.journey-row__title { font-family: var(--font-heading); font-weight: 700; font-size: 16px; line-height: 1.25; color: var(--color-sage-dark); }
+.journey-row__tagline { font-family: var(--font-body); font-size: 13.5px; line-height: 1.4; color: var(--color-gray-text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.journey-row__meta { font-family: var(--font-nav); font-size: 12.5px; font-weight: 500; color: var(--color-sage); margin-top: 2px; }
+.journey-row__go { align-self: center; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--color-sage-soft); color: var(--color-sage-dark); transition: background .25s ease, color .25s ease; }
+.journey-row:hover .journey-row__go { background: var(--color-sage-dark); color: var(--color-white); }
+.journey-row:hover .journey-row__go svg { transform: translateX(2px); }
+
+.journeys__more { text-align: center; margin-top: 22px; }
+.journeys__regionlink { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-nav); font-weight: 500; font-size: 15px; color: var(--color-sage-dark); text-decoration: none; border-bottom: 1.5px solid var(--color-orange); padding-bottom: 3px; }
+.journeys__regionlink:hover svg { transform: translateX(4px); }
+.journeys__viewall { display: flex; justify-content: center; margin-top: 34px; }
+
+@media (max-width: 960px) {
+  .journeys__layout { grid-template-columns: 1fr; }
+  .journey-lead { min-height: 400px; }
+  .journeys__list { grid-auto-rows: auto; }
+}
+@media (max-width: 640px) {
+  .journeys__tabs { justify-content: flex-start; overflow-x: auto; width: 100%; border-radius: 18px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .journeys__tabs::-webkit-scrollbar { display: none; }
+  .journeys__tab { padding: 10px 16px; font-size: 13.5px; }
+  .journey-lead { min-height: 360px; }
+  .journey-lead__body { padding: 20px; }
+  .journey-row { grid-template-columns: 96px 1fr auto; gap: 12px; min-height: 104px; }
+  .journey-row__tagline { -webkit-line-clamp: 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journeys__panel.is-active { animation: none; }
+  .journey-lead img, .journey-row, .journey-row__thumb img { transition: none; }
+}
+
+/* ---- Tours page: region + length filter bar ---- */
+.destinations-page__filterbar { display: grid; gap: 14px; margin-bottom: 36px; }
+.destinations-page__filterbar .destinations-page__filters { margin-bottom: 0; }
+.destinations-page__filtergroup { display: flex; align-items: center; gap: 16px; }
+.destinations-page__filterlabel { flex: 0 0 64px; font-family: var(--font-nav); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--color-sage); }
+.destinations-page__count { margin: 4px 0 0; font-family: var(--font-body); font-size: 14px; color: var(--color-gray-text); }
+@media (max-width: 760px) {
+  .destinations-page__filtergroup { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .destinations-page__filterbar .destinations-page__filters { flex-wrap: nowrap; overflow-x: auto; width: 100%; padding-bottom: 4px; scrollbar-width: none; }
+  .destinations-page__filterbar .destinations-page__filters::-webkit-scrollbar { display: none; }
+  .destinations-page__filter { white-space: nowrap; flex: 0 0 auto; }
+}
+
+/* ================= Mobile polish: multi-day cards & tour pages ================= */
+.destination-card__tagline { margin: -6px 0 0; font-family: var(--font-body); font-size: 14px; line-height: 1.45; color: var(--color-gray-text); }
+.destination-card__meta { margin: -8px 0 0; font-family: var(--font-nav); font-size: 12.5px; font-weight: 500; color: var(--color-sage); }
+
+/* Filter bar: let grid children shrink so the chip rows scroll inside the page instead of widening it */
+.destinations-page__filterbar, .destinations-page__filtergroup, .destinations-page__filterbar .destinations-page__filters { min-width: 0; max-width: 100%; }
+
+@media (max-width: 720px) {
+  html, body { overflow-x: hidden; }
+  .section { padding-top: 44px; padding-bottom: 44px; }
+
+  /* ---- Tours page ---- */
+  .destinations-hero { height: auto; min-height: 260px; padding-bottom: 28px; }
+  .destinations-hero__subtitle { font-size: 14.5px; line-height: 1.55; }
+  .destinations-page__filterbar { gap: 10px; margin-bottom: 22px; margin-right: -24px; }
+  .destinations-page__filtergroup { gap: 6px; }
+  .destinations-page__filterlabel { flex: none; font-size: 11px; }
+  .destinations-page__filterbar .destinations-page__filters { padding-right: 24px; gap: 8px; }
+  .destinations-page__filter { padding: 9px 16px; font-size: 13px; }
+  .destinations-page__count { margin: 0; font-size: 13px; padding-right: 24px; }
+  .destinations-page__grid { gap: 18px; }
+  .destination-card { border-radius: 16px; }
+  .destination-card__media { aspect-ratio: 16 / 10; }
+  .destination-card__media img { height: 100%; }
+  .destination-card__body { padding: 16px 16px 18px; gap: 12px; }
+  .destination-card__title { font-size: 18px; }
+  .destination-card__chips { display: none; }
+  .destination-card__foot { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; flex-wrap: wrap; }
+  .destination-card__price-value { font-size: 18px; }
+  .destination-card__actions { flex-direction: row; gap: 8px; flex: 1 1 auto; justify-content: flex-end; }
+  .destination-card__actions .btn { flex: 1 1 0; padding: 11px 12px; font-size: 13px; min-height: 44px; justify-content: center; text-align: center; }
+
+  /* ---- Multi-day tour pages ---- */
+  .tour-hero { height: 58vh; min-height: 420px; }
+  .tour-snapshot-wrap { margin-top: -40px; }
+  .tour-snapshot { padding: 18px; gap: 16px; border-radius: 16px; }
+  .tour-snapshot__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+  .tour-snapshot__value { font-size: 14.5px; }
+  .tour-snapshot__price { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; }
+  .tour-snapshot__price-value { font-size: 21px; line-height: 1.2; }
+  .tour-snapshot__price .btn { min-height: 44px; padding: 11px 20px; white-space: nowrap; }
+
+  .tour-tabs { margin-top: 18px; }
+  .tour-tabs__inner { scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
+  .tour-tabs__inner::-webkit-scrollbar { display: none; }
+  .tour-tabs__item { padding: 15px 12px; font-size: 13.5px; }
+
+  .tour-overview__grid { gap: 22px; }
+  .tour-overview__photo { max-width: none; border-radius: 16px; }
+  .tour-overview__photo img { aspect-ratio: 4 / 3; }
+  .tour-overview__text { font-size: 15.5px; line-height: 1.7; }
+
+  .tour-enquiry__grid { gap: 20px; }
+  .tour-enquiry__form { padding: 18px; border-radius: 16px; }
+  .tour-enquiry__form input, .tour-enquiry__form textarea { font-size: 16px; padding: 13px 14px; }
+  .tour-enquiry__form button { align-self: stretch; width: 100%; justify-content: center; min-height: 48px; }
+
+  .tour-related__head { margin-bottom: 20px; }
+  .tour-related__grid {
+    display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    margin: 0 -24px; padding: 4px 24px 14px; scroll-padding-left: 24px; scrollbar-width: none;
+  }
+  .tour-related__grid::-webkit-scrollbar { display: none; }
+  .tour-related__card { flex: 0 0 76%; scroll-snap-align: start; }
+  .tour-related__media { aspect-ratio: 16 / 10; }
+  .tour-related__body { padding: 14px 16px 16px; gap: 10px; }
+  .tour-related__cta { min-height: 40px; }
+  .tour-photo-credits p { font-size: 11.5px; line-height: 1.55; }
+}
+@media (max-width: 720px) {
+  .journeys__regionlink { padding: 12px 0 8px; min-height: 44px; }
+  .journeys__tab { min-height: 44px; }
+}
+
 body { background: var(--color-cream, #f8f7f2); }
 .destinations-page__filter { cursor: pointer; }
 [data-tour-card][hidden] { display: none !important; }
@@ -3942,167 +4121,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   </div>
 </section>
 
-<section class="section section--sage-soft" id="home-tours">
-  <div class="container">
-    <div class="tours__head reveal">
-      <h2 class="section-heading tours__title">Explore Our Tours</h2>
-      <p class="tours__subtitle">Multi-day Tours</p>
-    </div>
-    <div class="tours__grid">
-      <div class="tour-card reveal">
-        <img src="assets/user-photos/indias-golden-triangle-hero1.jpg" alt="India's Golden Triangle" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">8N9D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">India's Golden Triangle</p>
-          <a href="indias-golden-triangle.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.08s">
-        <img src="assets/user-photos/kerala-tour-hero1.jpg" alt="Kerala Tour" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">8N9D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Kerala Tour</p>
-          <a href="kerala-tour.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.16s">
-        <img src="assets/user-photos/best-of-north-india-hero1.jpg" alt="Best of North India" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">15N16D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Best of North India</p>
-          <a href="best-of-north-india.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.24s">
-        <img src="assets/user-photos/varanasiveritabletour-hero1.jpg" alt="Varanasi Veritable Tour" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">3N4D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Varanasi Veritable Tour</p>
-          <a href="varanasiveritabletour.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.32s">
-        <img src="assets/user-photos/lucknow-to-bodhgaya-hero1.jpg" alt="Lucknow to Bodhgaya" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">8N9D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Lucknow to Bodhgaya</p>
-          <a href="lucknow-to-bodhgaya.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.4s">
-        <img src="assets/user-photos/spiti-valley-adventure-hero1.jpg" alt="Spiti Valley Adventure" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">13N14D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Spiti Valley Adventure</p>
-          <a href="spiti-valley-adventure.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.48s">
-        <img src="assets/user-photos/a-bit-of-north-and-south-hero1.jpg" alt="A Bit of North &amp; A Bit of South" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">16N17D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">A Bit of North &amp; A Bit of South</p>
-          <a href="a-bit-of-north-and-south.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.56s">
-        <img src="assets/user-photos/southern-splendors-hero1.jpg" alt="Southern Splendors" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">17N18D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Southern Splendors</p>
-          <a href="southern-splendors.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.64s">
-        <img src="assets/user-photos/by-road-through-high-passes-hero1.jpg" alt="By Road Through High Passes" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">12N13D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">By Road Through High Passes</p>
-          <a href="by-road-through-high-passes.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.72s">
-        <img src="assets/user-photos/golden-triangle-rustic-rajasthan-hero1.jpg" alt="Golden Triangle &amp; Rustic Rajasthan" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">9N10D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Golden Triangle &amp; Rustic Rajasthan</p>
-          <a href="golden-triangle-rustic-rajasthan.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.8s">
-        <img src="assets/user-photos/the-temple-run-hero1.jpg" alt="The Temple Run" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">6N7D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">The Temple Run</p>
-          <a href="the-temple-run.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.88s">
-        <img src="assets/user-photos/heavenly-himalayas-hero1.jpg" alt="Heavenly Himalayas" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">8N9D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Heavenly Himalayas</p>
-          <a href="heavenly-himalayas.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:0.96s">
-        <img src="assets/user-photos/heritage-streets-hero1.jpg" alt="Heritage Streets" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">10N11D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Heritage Streets</p>
-          <a href="heritage-streets.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-      <div class="tour-card reveal" style="transition-delay:1.04s">
-        <img src="assets/user-photos/golden-triangle-roaring-ranthambhore-hero1.jpg" alt="Golden Triangle &amp; Roaring Ranthambhore" />
-        <div class="tour-card__scrim"></div>
-        <span class="tour-card__badge">8N9D</span>
-        <div class="tour-card__foot">
-          <p class="tour-card__title">Golden Triangle &amp; Roaring Ranthambhore</p>
-          <a href="golden-triangle-roaring-ranthambhore.html" class="btn btn--sage tour-card__cta">View Details</a>
-        </div>
-      </div>
-    </div>
-    <div class="tours__viewall reveal">
-      <a href="destinations.html" class="btn btn--sage">View all tours</a>
-    </div>
-    <div class="legacy">
-      <div class="legacy__item reveal">
-        <div class="legacy__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="19" r="11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13.5l1.9 3.9 4.3.6-3.1 3 .7 4.3-3.8-2-3.8 2 .7-4.3-3.1-3 4.3-.6z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 28.5L13 42l7-3.5 4 5 4-5 7 3.5-4-13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>20+ Years of Legacy</h3>
-        <p>Established in 2000, we are the original storytellers of Varanasi's ancient ghats.</p>
-      </div>
-      <div class="legacy__item reveal" style="transition-delay:0.08s">
-        <div class="legacy__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 6v28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 8c8 5 12 14 12 24H24z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 14c-5 5-8 11-8 18h8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 36h32l-4.5 7h-23z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>The Sailing Club</h3>
-        <p>Exclusive multi-day expeditions and luxury sandbar camping on the Ganges.</p>
-      </div>
-      <div class="legacy__item reveal" style="transition-delay:0.16s">
-        <div class="legacy__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M6 12l12-4 12 4 12-4v28l-12 4-12-4-12 4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 8v28M30 12v28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="21" r="3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Bespoke Itineraries</h3>
-        <p>From private heritage walks to MICE retreats, we tailor every detail to your soul.</p>
-      </div>
-      <div class="legacy__item reveal" style="transition-delay:0.24s">
-        <div class="legacy__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M6 24h36c0 9-7 16-18 16S6 33 6 24z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 44h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8c-2 3 2 5 0 8M24 6c-2 3 2 5 0 8M31 8c-2 3 2 5 0 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Authentic Immersion</h3>
-        <p>Experience local life through home-cooked meals and rituals with true storytellers.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="section section--sage-soft journeys" id="home-tours"><div class="container"><div class="journeys__head reveal"><p class="eyebrow">Multi-day Journeys</p><h2 class="section-heading journeys__title">Find Your Journey</h2><p class="journeys__sub">Handcrafted itineraries, grouped by the India you want to feel. Pick a region to begin.</p></div><div class="journeys__tabs reveal" role="tablist" aria-label="Choose a region"><button type="button" class="journeys__tab is-active" role="tab" aria-selected="true" tabindex="0" data-region-tab="heritage">Rajasthan &amp; Heritage</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="himalaya">Himalaya &amp; Ladakh</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="south">South India</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="spiritual">Spiritual India</button></div><div class="journeys__panels reveal"><div class="journeys__panel is-active" role="tabpanel" data-region-panel="heritage"><p class="journeys__blurb">Palaces, forts and the classic Golden Triangle, with tigers and painted havelis on the side.</p><div class="journeys__layout"><a class="journey-lead" href="indias-golden-triangle.html"><img src="assets/user-photos/indias-golden-triangle-hero1.jpg" alt="India&#x27;s Golden Triangle" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">8N9D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Rajasthan &amp; Heritage</span><span class="journey-lead__title">India&#x27;s Golden Triangle</span><span class="journey-lead__tagline">Delhi · Agra · Jaipur · Varanasi</span><span class="journey-lead__meta"><span>9 Days / 8 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="golden-triangle-rustic-rajasthan.html"><span class="journey-row__thumb"><img src="assets/user-photos/golden-triangle-rustic-rajasthan-hero1.jpg" alt="Golden Triangle &amp; Rustic Rajasthan" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Golden Triangle &amp; Rustic Rajasthan</span><span class="journey-row__tagline">Great Monuments, Village Lanes and Painted Havelis</span><span class="journey-row__meta">10 Days / 9 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="golden-triangle-roaring-ranthambhore.html"><span class="journey-row__thumb"><img src="assets/user-photos/golden-triangle-roaring-ranthambhore-hero1.jpg" alt="Golden Triangle &amp; Roaring Ranthambhore" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Golden Triangle &amp; Roaring Ranthambhore</span><span class="journey-row__tagline">Monuments, a Hill Fort and Tigers in the Wild</span><span class="journey-row__meta">9 Days / 8 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="heritage-streets.html"><span class="journey-row__thumb"><img src="assets/user-photos/heritage-streets-hero1.jpg" alt="Heritage Streets" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Heritage Streets</span><span class="journey-row__tagline">Forts, Palaces and Lakes of Royal Rajasthan</span><span class="journey-row__meta">11 Days / 10 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="heritage">See all Rajasthan &amp; Heritage journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="himalaya" hidden><p class="journeys__blurb">High passes, turquoise lakes and monasteries perched above the clouds.</p><div class="journeys__layout"><a class="journey-lead" href="heavenly-himalayas.html"><img src="assets/user-photos/heavenly-himalayas-hero1.jpg" alt="Heavenly Himalayas" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">8N9D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Himalaya &amp; Ladakh</span><span class="journey-lead__title">Heavenly Himalayas</span><span class="journey-lead__tagline">Ladakh&#x27;s Monasteries, Dunes and High-Altitude Lakes</span><span class="journey-lead__meta"><span>9 Days / 8 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="spiti-valley-adventure.html"><span class="journey-row__thumb"><img src="assets/user-photos/spiti-valley-adventure-hero1.jpg" alt="Spiti Valley Adventure" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Spiti Valley Adventure</span><span class="journey-row__tagline">Across the Cold Desert of the Himalayas</span><span class="journey-row__meta">14 Days / 13 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="by-road-through-high-passes.html"><span class="journey-row__thumb"><img src="assets/user-photos/by-road-through-high-passes-hero1.jpg" alt="By Road Through High Passes" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">By Road Through High Passes</span><span class="journey-row__tagline">Delhi to Ladakh, the Slow and Scenic Way</span><span class="journey-row__meta">13 Days / 12 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="himalaya">See all Himalaya &amp; Ladakh journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="south" hidden><p class="journeys__blurb">Chola temples, tea hills and quiet Kerala backwaters.</p><div class="journeys__layout"><a class="journey-lead" href="southern-splendors.html"><img src="assets/user-photos/southern-splendors-hero1.jpg" alt="Southern Splendors" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">17N18D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; South India</span><span class="journey-lead__title">Southern Splendors</span><span class="journey-lead__tagline">Temple Towns of Tamil Nadu to the Backwaters of Kerala</span><span class="journey-lead__meta"><span>18 Days / 17 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="kerala-tour.html"><span class="journey-row__thumb"><img src="assets/user-photos/kerala-tour-hero1.jpg" alt="Kerala Tour" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Kerala Tour</span><span class="journey-row__tagline">God&#x27;s Own Country</span><span class="journey-row__meta">10 Days / 9 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="the-temple-run.html"><span class="journey-row__thumb"><img src="assets/user-photos/the-temple-run-hero1.jpg" alt="The Temple Run" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">The Temple Run</span><span class="journey-row__tagline">Shore Temples, Chola Giants &amp; the Heart of Tamil Nadu</span><span class="journey-row__meta">7 Days / 6 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="a-bit-of-north-and-south.html"><span class="journey-row__thumb"><img src="assets/user-photos/a-bit-of-north-and-south-hero1.jpg" alt="A Bit of North &amp; A Bit of South" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">A Bit of North &amp; A Bit of South</span><span class="journey-row__tagline">Forts and Tigers to Tea Hills and Backwaters</span><span class="journey-row__meta">17 Days / 16 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="south">See all South India journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="spiritual" hidden><p class="journeys__blurb">Dawn on the ghats of Varanasi and the Buddhist trail to Bodhgaya.</p><div class="journeys__layout"><a class="journey-lead" href="best-of-north-india.html"><img src="assets/user-photos/best-of-north-india-hero1.jpg" alt="Best of North India" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">12N13D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Spiritual India</span><span class="journey-lead__title">Best of North India</span><span class="journey-lead__tagline">Delhi to Varanasi, the Long Way</span><span class="journey-lead__meta"><span>13 Days / 12 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="varanasiveritabletour.html"><span class="journey-row__thumb"><img src="assets/user-photos/varanasiveritabletour-hero1.jpg" alt="Varanasi Veritable Tour" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Varanasi Veritable Tour</span><span class="journey-row__tagline">Ghats, Temples &amp; Old-City Lanes</span><span class="journey-row__meta">4 Days / 3 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="lucknow-to-bodhgaya.html"><span class="journey-row__thumb"><img src="assets/user-photos/lucknow-to-bodhgaya-hero1.jpg" alt="Lucknow to Bodhgaya" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Lucknow to Bodhgaya</span><span class="journey-row__tagline">Nawabi Heritage to Buddhist Pilgrimage</span><span class="journey-row__meta">8 Days / 7 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="spiritual">See all Spiritual India journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><div class="journeys__viewall reveal"><a href="destinations.html" class="btn btn--sage" data-region-link="all">View all journeys</a></div></div></section>
 
 <section class="section" id="home-day-tours">
   <div class="container">
@@ -4309,22 +4328,40 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 <section class="section destinations-page">
   <div class="container">
-    <div class="destinations-page__filters" id="destinations-filters">
-      <button class="destinations-page__filter is-active" data-filter="all">All Trips</button>
-      <button class="destinations-page__filter" data-filter="short">Short Trips (2&ndash;4N)</button>
-      <button class="destinations-page__filter" data-filter="week">Week-Long (5&ndash;9N)</button>
-      <button class="destinations-page__filter" data-filter="grand">Grand Journeys (10N+)</button>
+    <div class="destinations-page__filterbar" id="destinations-filters">
+      <div class="destinations-page__filtergroup">
+        <span class="destinations-page__filterlabel">Region</span>
+        <div class="destinations-page__filters" role="group" aria-label="Filter by region">
+          <button class="destinations-page__filter is-active" data-region-filter="all">All Regions</button>
+          <button class="destinations-page__filter" data-region-filter="heritage">Rajasthan &amp; Heritage</button>
+          <button class="destinations-page__filter" data-region-filter="himalaya">Himalaya &amp; Ladakh</button>
+          <button class="destinations-page__filter" data-region-filter="south">South India</button>
+          <button class="destinations-page__filter" data-region-filter="spiritual">Spiritual India</button>
+        </div>
+      </div>
+      <div class="destinations-page__filtergroup">
+        <span class="destinations-page__filterlabel">Length</span>
+        <div class="destinations-page__filters" role="group" aria-label="Filter by length">
+          <button class="destinations-page__filter is-active" data-filter="all">Any Length</button>
+          <button class="destinations-page__filter" data-filter="short">Short (2&ndash;4N)</button>
+          <button class="destinations-page__filter" data-filter="week">Week-Long (5&ndash;9N)</button>
+          <button class="destinations-page__filter" data-filter="grand">Grand (10N+)</button>
+        </div>
+      </div>
+      <p class="destinations-page__count" id="destinations-result-count" aria-live="polite"></p>
     </div>
 
     <div class="destinations-page__grid" id="destinations-tour-grid">
 
-      <article class="destination-card" data-tour-card data-nights="7">
+      <article class="destination-card" data-tour-card data-nights="7" data-region="spiritual">
         <div class="destination-card__media">
           <img src="assets/user-photos/lucknow-to-bodhgaya-hero1.jpg" alt="Lucknow to Bodhgaya" />
           <span class="destination-card__badge">7N8D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Lucknow to Bodhgaya</h3>
+          <p class="destination-card__tagline">Nawabi Heritage to Buddhist Pilgrimage</p>
+          <p class="destination-card__meta">8 Days / 7 Nights &middot; Spiritual India</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4343,13 +4380,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="7">
+      <article class="destination-card" data-tour-card data-nights="8" data-region="heritage">
         <div class="destination-card__media">
           <img src="assets/user-photos/indias-golden-triangle-hero1.jpg" alt="India's Golden Triangle" />
-          <span class="destination-card__badge">7N8D</span>
+          <span class="destination-card__badge">8N9D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">India's Golden Triangle</h3>
+          <p class="destination-card__tagline">Delhi · Agra · Jaipur · Varanasi</p>
+          <p class="destination-card__meta">9 Days / 8 Nights &middot; Rajasthan &amp; Heritage</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4368,13 +4407,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="3">
+      <article class="destination-card" data-tour-card data-nights="3" data-region="spiritual">
         <div class="destination-card__media">
           <img src="assets/user-photos/varanasiveritabletour-hero1.jpg" alt="Varanasi Veritable Tour" />
           <span class="destination-card__badge">3N4D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Varanasi Veritable Tour</h3>
+          <p class="destination-card__tagline">Ghats, Temples &amp; Old-City Lanes</p>
+          <p class="destination-card__meta">4 Days / 3 Nights &middot; Spiritual India</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4393,13 +4434,14 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="2">
+      <article class="destination-card" data-tour-card data-nights="2" data-region="spiritual">
         <div class="destination-card__media">
           <img src="assets/user-photos/varanasiveritabletour-hero1.jpg" alt="Varanasi Solo Yolo" />
           <span class="destination-card__badge">2N3D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Varanasi Solo Yolo</h3>
+          <p class="destination-card__meta">3 Days / 2 Nights &middot; Spiritual India</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4417,13 +4459,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="12">
+      <article class="destination-card" data-tour-card data-nights="12" data-region="spiritual">
         <div class="destination-card__media">
           <img src="assets/user-photos/best-of-north-india-hero1.jpg" alt="Best of North India: Delhi to Kashi" />
           <span class="destination-card__badge">12N13D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Best of North India: Delhi to Kashi</h3>
+          <p class="destination-card__tagline">Delhi to Varanasi, the Long Way</p>
+          <p class="destination-card__meta">13 Days / 12 Nights &middot; Spiritual India</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4442,13 +4486,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="8">
+      <article class="destination-card" data-tour-card data-nights="9" data-region="south">
         <div class="destination-card__media">
           <img src="assets/user-photos/kerala-tour-hero1.jpg" alt="Kerala Tour" />
-          <span class="destination-card__badge">8N9D</span>
+          <span class="destination-card__badge">9N10D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Kerala Tour</h3>
+          <p class="destination-card__tagline">God&#x27;s Own Country</p>
+          <p class="destination-card__meta">10 Days / 9 Nights &middot; South India</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4467,13 +4513,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="13">
+      <article class="destination-card" data-tour-card data-nights="13" data-region="himalaya">
         <div class="destination-card__media">
           <img src="assets/user-photos/spiti-valley-adventure-hero1.jpg" alt="Spiti Valley Adventure" />
           <span class="destination-card__badge">13N14D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Spiti Valley Adventure</h3>
+          <p class="destination-card__tagline">Across the Cold Desert of the Himalayas</p>
+          <p class="destination-card__meta">14 Days / 13 Nights &middot; Himalaya &amp; Ladakh</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4492,13 +4540,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="16">
+      <article class="destination-card" data-tour-card data-nights="16" data-region="south">
         <div class="destination-card__media">
           <img src="assets/user-photos/a-bit-of-north-and-south-hero1.jpg" alt="A Bit of North &amp; A Bit of South" />
           <span class="destination-card__badge">16N17D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">A Bit of North &amp; A Bit of South</h3>
+          <p class="destination-card__tagline">Forts and Tigers to Tea Hills and Backwaters</p>
+          <p class="destination-card__meta">17 Days / 16 Nights &middot; South India</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4517,13 +4567,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="17">
+      <article class="destination-card" data-tour-card data-nights="17" data-region="south">
         <div class="destination-card__media">
           <img src="assets/user-photos/southern-splendors-hero1.jpg" alt="Southern Splendors" />
           <span class="destination-card__badge">17N18D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Southern Splendors</h3>
+          <p class="destination-card__tagline">Temple Towns of Tamil Nadu to the Backwaters of Kerala</p>
+          <p class="destination-card__meta">18 Days / 17 Nights &middot; South India</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4542,13 +4594,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="12">
+      <article class="destination-card" data-tour-card data-nights="12" data-region="himalaya">
         <div class="destination-card__media">
           <img src="assets/user-photos/by-road-through-high-passes-hero1.jpg" alt="By Road Through High Passes" />
           <span class="destination-card__badge">12N13D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">By Road Through High Passes</h3>
+          <p class="destination-card__tagline">Delhi to Ladakh, the Slow and Scenic Way</p>
+          <p class="destination-card__meta">13 Days / 12 Nights &middot; Himalaya &amp; Ladakh</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4567,13 +4621,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="9">
+      <article class="destination-card" data-tour-card data-nights="9" data-region="heritage">
         <div class="destination-card__media">
           <img src="assets/user-photos/golden-triangle-rustic-rajasthan-hero1.jpg" alt="Golden Triangle &amp; Rustic Rajasthan" />
           <span class="destination-card__badge">9N10D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Golden Triangle &amp; Rustic Rajasthan</h3>
+          <p class="destination-card__tagline">Great Monuments, Village Lanes and Painted Havelis</p>
+          <p class="destination-card__meta">10 Days / 9 Nights &middot; Rajasthan &amp; Heritage</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4592,13 +4648,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="6">
+      <article class="destination-card" data-tour-card data-nights="6" data-region="south">
         <div class="destination-card__media">
           <img src="assets/user-photos/the-temple-run-hero1.jpg" alt="The Temple Run" />
           <span class="destination-card__badge">6N7D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">The Temple Run</h3>
+          <p class="destination-card__tagline">Shore Temples, Chola Giants &amp; the Heart of Tamil Nadu</p>
+          <p class="destination-card__meta">7 Days / 6 Nights &middot; South India</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4617,13 +4675,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="8">
+      <article class="destination-card" data-tour-card data-nights="8" data-region="himalaya">
         <div class="destination-card__media">
           <img src="assets/user-photos/heavenly-himalayas-hero1.jpg" alt="Heavenly Himalayas" />
           <span class="destination-card__badge">8N9D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Heavenly Himalayas</h3>
+          <p class="destination-card__tagline">Ladakh&#x27;s Monasteries, Dunes and High-Altitude Lakes</p>
+          <p class="destination-card__meta">9 Days / 8 Nights &middot; Himalaya &amp; Ladakh</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4642,13 +4702,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="10">
+      <article class="destination-card" data-tour-card data-nights="10" data-region="heritage">
         <div class="destination-card__media">
           <img src="assets/user-photos/heritage-streets-hero1.jpg" alt="Heritage Streets" />
           <span class="destination-card__badge">10N11D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Heritage Streets</h3>
+          <p class="destination-card__tagline">Forts, Palaces and Lakes of Royal Rajasthan</p>
+          <p class="destination-card__meta">11 Days / 10 Nights &middot; Rajasthan &amp; Heritage</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -4667,13 +4729,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="destination-card" data-tour-card data-nights="8">
+      <article class="destination-card" data-tour-card data-nights="8" data-region="heritage">
         <div class="destination-card__media">
           <img src="assets/user-photos/golden-triangle-roaring-ranthambhore-hero1.jpg" alt="Golden Triangle &amp; Roaring Ranthambhore" />
           <span class="destination-card__badge">8N9D</span>
         </div>
         <div class="destination-card__body">
           <h3 class="destination-card__title">Golden Triangle &amp; Roaring Ranthambhore</h3>
+          <p class="destination-card__tagline">Monuments, a Hill Fort and Tigers in the Wild</p>
+          <p class="destination-card__meta">9 Days / 8 Nights &middot; Rajasthan &amp; Heritage</p>
           <div class="destination-card__chips">
             <span class="destination-card__chip">Handcrafted Itinerary</span>
             <span class="destination-card__chip">Expert Local Guide</span>
@@ -11566,6 +11630,43 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 (function () {
 
+  // Journeys: region tabs
+  var jTabs = Array.prototype.slice.call(root.querySelectorAll('[data-region-tab]'));
+  var jPanels = root.querySelectorAll('[data-region-panel]');
+  function selectRegion(key, focusTab) {
+    jTabs.forEach(function (t) {
+      var on = t.getAttribute('data-region-tab') === key;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (on && focusTab) t.focus();
+    });
+    jPanels.forEach(function (p) {
+      var on = p.getAttribute('data-region-panel') === key;
+      p.hidden = !on;
+      p.classList.toggle('is-active', on);
+    });
+  }
+  jTabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { selectRegion(t.getAttribute('data-region-tab'), false); });
+    t.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowRight') next = (i + 1) % jTabs.length;
+      else if (e.key === 'ArrowLeft') next = (i - 1 + jTabs.length) % jTabs.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = jTabs.length - 1;
+      if (next === null) return;
+      e.preventDefault();
+      selectRegion(jTabs[next].getAttribute('data-region-tab'), true);
+    });
+  });
+  // "See all ..." links hand the chosen region to the Tours page filter.
+  root.querySelectorAll('[data-region-link]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.__tjApplyRegion) window.__tjApplyRegion(a.getAttribute('data-region-link'));
+    });
+  });
+
   // Hero carousel
   var heroImages = root.querySelectorAll('.hero__image');
   var heroTitleEl = document.getElementById('home-hero-title');
@@ -11730,35 +11831,46 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 (function () {
 
-  // Duration filter
+  // Region + length filters (combined)
   var filterTests = {
     all: function () { return true; },
     short: function (n) { return n >= 2 && n <= 4; },
     week: function (n) { return n >= 5 && n <= 9; },
     grand: function (n) { return n >= 10; },
   };
-  var filterButtons = root.querySelectorAll('.destinations-page__filter');
+  var state = { region: 'all', length: 'all' };
+  var lengthButtons = root.querySelectorAll('[data-filter]');
+  var regionButtons = root.querySelectorAll('[data-region-filter]');
   var cards = root.querySelectorAll('[data-tour-card]');
   var emptyMsg = document.getElementById('destinations-empty-msg');
+  var countEl = document.getElementById('destinations-result-count');
 
-  function applyFilter(key) {
+  function applyFilters() {
     var visibleCount = 0;
     cards.forEach(function (card) {
       var nights = Number(card.getAttribute('data-nights'));
-      var show = filterTests[key](nights);
+      var regionOk = state.region === 'all' || card.getAttribute('data-region') === state.region;
+      var show = regionOk && filterTests[state.length](nights);
       card.hidden = !show;
       if (show) visibleCount++;
     });
     emptyMsg.hidden = visibleCount !== 0;
+    if (countEl) countEl.textContent = 'Showing ' + visibleCount + ' of ' + cards.length + ' journeys';
+    regionButtons.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-region-filter') === state.region); });
+    lengthButtons.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-filter') === state.length); });
   }
 
-  filterButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      filterButtons.forEach(function (b) { b.classList.remove('is-active'); });
-      btn.classList.add('is-active');
-      applyFilter(btn.getAttribute('data-filter'));
-    });
+  regionButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () { state.region = btn.getAttribute('data-region-filter'); applyFilters(); });
   });
+  lengthButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () { state.length = btn.getAttribute('data-filter'); applyFilters(); });
+  });
+  // Lets the homepage region tabs deep-link into a pre-filtered list.
+  window.__tjApplyRegion = function (key) { state.region = key || 'all'; state.length = 'all'; applyFilters(); };
+  var qs = /[?&]region=([a-z]+)/.exec(window.location.search || '');
+  if (qs) state.region = qs[1];
+  applyFilters();
 
   // Enquiry form — routes every submission to info@tournivaljourneys.com
   // via the visitor's own mail client, so all enquiries land in one inbox.
