@@ -1,0 +1,23 @@
+{
+  "tour": "southern-splendors",
+  "days": {
+    "1":  { "title": "Arrival in Chennai", "queries": ["Chennai Marina Beach", "Chennai Kapaleeshwarar Temple", "Chennai city India"] },
+    "2":  { "title": "Chennai to Mahabalipuram", "queries": ["Shore Temple Mahabalipuram", "Mahabalipuram Pancha Rathas", "Mamallapuram temple"] },
+    "3":  { "title": "Day Trip to Kanchipuram", "queries": ["Kanchipuram temple", "Ekambareswarar Temple gopuram", "Kailasanathar Temple Kanchipuram"] },
+    "4":  { "title": "Mahabalipuram to Pondicherry", "queries": ["Pondicherry temple elephant", "Manakula Vinayagar Temple", "Puducherry temple"] },
+    "5":  { "title": "Pondicherry's French Quarter", "queries": ["Pondicherry French Quarter street", "Pondicherry yellow colonial house", "Puducherry promenade beach"] },
+    "6":  { "title": "Pondicherry to Thanjavur", "queries": ["Thanjavur palace", "Chola bronze sculpture", "Thanjavur Maratha palace"] },
+    "7":  { "title": "Brihadeeshwara & Kumbakonam", "queries": ["Brihadeeswarar Temple Thanjavur", "Airavatesvara Temple Darasuram", "Thanjavur big temple"] },
+    "8":  { "title": "Thanjavur to Madurai", "queries": ["Madurai flower market", "Indian flower market marigold garlands", "jasmine garlands market India"] },
+    "9":  { "title": "Meenakshi Amman Temple", "queries": ["Meenakshi Amman Temple Madurai", "Meenakshi temple gopuram", "Madurai temple"] },
+    "10": { "title": "Madurai to Munnar", "queries": ["Munnar tea hills road", "Western Ghats road Kerala", "Kalaripayattu martial art"] },
+    "11": { "title": "Tea Hills of Munnar", "queries": ["Munnar tea plantation", "Munnar tea estate trekking", "Kerala tea gardens hills"] },
+    "12": { "title": "Munnar to Periyar", "queries": ["Thekkady spice plantation", "cardamom plantation Kerala", "Kerala spices pepper"] },
+    "13": { "title": "Periyar Jungle & Kathakali", "queries": ["Kathakali dancer", "Periyar lake Thekkady", "Kathakali performance Kerala"] },
+    "14": { "title": "Periyar to Kumarakom", "queries": ["Kumarakom Vembanad lake", "Kumarakom backwaters sunset", "Kerala lake sunset coconut palms"] },
+    "15": { "title": "Kumarakom Village Life", "queries": ["Kerala backwaters canoe village", "Kerala canal boat coconut palms", "Kerala village backwaters"] },
+    "16": { "title": "Alleppey Houseboat", "queries": ["Alleppey houseboat", "Alappuzha houseboat backwaters", "Kerala houseboat"] },
+    "17": { "title": "Fort Kochi", "queries": ["Chinese fishing nets Fort Kochi", "Fort Kochi fishing nets sunset", "Kochi Mattancherry"] },
+    "18": { "title": "Departure from Kochi", "queries": ["Kochi waterfront", "Kochi harbour Kerala", "Fort Kochi beach"] }
+  }
+}
