@@ -4007,6 +4007,48 @@ button {
   .journeys__tab { min-height: 44px; }
 }
 
+/* ===== Tour pages: Destinations Covered (Overview) ===== */
+.tour-destinations { margin: 0 0 22px; }
+.tour-destinations__heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-sage-dark);
+  margin: 0 0 12px;
+}
+.tour-destinations__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tour-destinations__chip {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: var(--color-sage-soft);
+  color: var(--color-sage-dark);
+  border: 1px solid rgba(110, 146, 119, 0.35);
+}
+@media (max-width: 720px) {
+  .tour-destinations { margin-bottom: 18px; }
+  .tour-destinations__chip { font-size: 13px; padding: 8px 12px; }
+}
+
+/* Homepage day-tour grid: a lone last card (7th, 3-col layout) is centred */
+@media (min-width: 961px) {
+  .daytours__grid > .daytour-card:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
+
 body { background: var(--color-cream, #f8f7f2); }
 .destinations-page__filter { cursor: pointer; }
 [data-tour-card][hidden] { display: none !important; }
@@ -4176,6 +4218,14 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         <div class="daytour-card__foot">
           <p>Sailing &amp; Camping on the Ganges</p>
           <a href="sailing-camping-varanasi.html" class="btn btn--orange">Explore</a>
+        </div>
+      </div>
+      <div class="daytour-card reveal" style="transition-delay:0.48s">
+        <img src="assets/user-photos/blue-city-walk-hero.jpg" alt="Blue City Walk, Jodhpur" />
+        <div class="daytour-card__scrim"></div>
+        <div class="daytour-card__foot">
+          <p>Blue City Walk, Jodhpur</p>
+          <a href="blue-city-walk.html" class="btn btn--orange">Explore</a>
         </div>
       </div>
     </div>
@@ -5002,6 +5052,39 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
+      <article class="daytour-page-card" id="day-tours-blue-city-walk">
+        <div class="daytour-page-card__media">
+          <img src="assets/user-photos/blue-city-walk-hero.jpg" alt="Blue City Walk, Jodhpur" />
+          <span class="daytour-page-card__badge">2.5 Hours</span>
+        </div>
+        <div class="daytour-page-card__body">
+          <div>
+            <h3 class="daytour-page-card__title">Blue City Walk</h3>
+            <p class="daytour-page-card__tagline">The Jodhpur only locals know</p>
+          </div>
+          <div class="daytour-page-card__facts">
+            <span class="daytour-page-card__fact">Starts at the Clock Tower</span>
+            <span class="daytour-page-card__fact">15 people max</span>
+          </div>
+          <p class="daytour-page-card__desc">Skip the fort-and-palace routine and walk Jodhpur with a local guide who loves their hometown &mdash; through indigo-washed lanes, a century-old market, a nearly 300-year-old stepwell and an ancient temple, finishing with the city&rsquo;s famous Makhaniya lassi.</p>
+          <ul class="daytour-page-card__highlights">
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Blue City lanes &amp; local neighbourhoods</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Century-old Clock Tower market</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Nearly 300-year-old stepwell</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ancient temple visit &amp; Makhaniya lassi</li>
+          </ul>
+          <div class="daytour-page-card__foot">
+            <div class="daytour-page-card__price">
+              <span class="daytour-page-card__price-value daytour-page-card__price-value--muted">Price on request</span>
+            </div>
+            <div class="daytour-page-card__actions">
+              <a href="blue-city-walk.html" class="btn btn--outline">View Details</a>
+              <a href="#enquire" class="btn btn--orange">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -5080,6 +5163,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">God's Own Country</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Kochi</li><li class="tour-destinations__chip">Munnar</li><li class="tour-destinations__chip">Periyar (Thekkady)</li><li class="tour-destinations__chip">Kollam</li><li class="tour-destinations__chip">Alleppey</li></ul></div>
       <p class="tour-overview__text">Rightfully called &ldquo;God&rsquo;s Own Country,&rdquo; Kerala invites you to go with the flow. Drift through Alleppey&rsquo;s serene backwaters, raft in wild Periyar, and wander Munnar&rsquo;s emerald tea hills while savoring rich coastal flavors.</p><p class="tour-overview__text">Ten days, nine nights, and every mile handled for you &mdash; from a private chauffeured SUV to handpicked stays and a night aboard your own houseboat. Be a guest in paradise with Tourrnival Jourrneys.</p>
     </div>
   </div>
@@ -5464,6 +5548,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Delhi · Agra · Jaipur · Varanasi</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Agra</li><li class="tour-destinations__chip">Jaipur</li><li class="tour-destinations__chip">Varanasi</li></ul></div>
       <p class="tour-overview__text">The Golden Triangle is India's classic introduction — three cities, three empires, one unforgettable arc from Delhi's broad imperial avenues to Agra's marble monument to love and Jaipur's rose-pink palaces.</p><p class="tour-overview__text">This eight-day route goes one step further, closing with two full days in Varanasi, where sunrise boat rides and the nightly Ganga Aarti carry the trip from history into something closer to devotion. A private AC SUV and driver handle every transfer along the way.</p>
     </div>
   </div>
@@ -5513,7 +5598,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/indias-golden-triangle-day2.jpg" alt="Delhi in a Day" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>The morning covers Humayun's Tomb — the garden-tomb that inspired the Taj Mahal a century later — and the soaring Jama Masjid. A rickshaw ride through the packed lanes of Chandni Chowk leads into the afternoon's stops at Qutub Minar and Gurudwara Bangla Sahib.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -5534,7 +5619,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/indias-golden-triangle-day3.jpg" alt="The Taj Mahal" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Drive to Agra for a day built entirely around the Taj Mahal — the ivory-white marble mausoleum Emperor Shah Jahan raised for his wife Mumtaz Mahal, completed in 1653. See it in its best light, then spend the afternoon wandering the surrounding gardens and riverfront.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -5555,7 +5640,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/indias-golden-triangle-day4.jpg" alt="Agra to Jaipur" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>A last morning in Agra takes in Agra Fort, the red-sandstone stronghold that housed the Mughal court until 1638, and its surrounding bazaars, before the road turns west toward Rajasthan and the Pink City.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -5655,7 +5740,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>07 Nights Accommodation</strong><span class="tour-inclusions__detail">Double-occupancy at quality 5-star hotels throughout.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">07 breakfasts and 2 lunches included at hotels/restaurants.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">AC SUV (Toyota Innova Crysta) with driver for every transfer and sightseeing stop.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guided Experiences</strong><span class="tour-inclusions__detail">English-speaking guides at every monument, a rickshaw ride through Chandni Chowk, and a guided walk through Jaipur's Pink City market.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Ganges Rituals</strong><span class="tour-inclusions__detail">Morning boat ride and evening Ganga Aarti ceremony in Varanasi.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Tickets & Taxes</strong><span class="tour-inclusions__detail">All monument entry fees and local taxes included.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>07 Nights Accommodation</strong><span class="tour-inclusions__detail">Double-occupancy at quality 5-star hotels throughout.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">07 breakfasts included at hotels/restaurants.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">AC SUV (Toyota Innova Crysta) with driver for every transfer and sightseeing stop.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guided Experiences</strong><span class="tour-inclusions__detail">English-speaking guides at every monument, a rickshaw ride through Chandni Chowk, and a guided walk through Jaipur's Pink City market.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Ganges Rituals</strong><span class="tour-inclusions__detail">Morning boat ride and evening Ganga Aarti ceremony in Varanasi.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Tickets & Taxes</strong><span class="tour-inclusions__detail">All monument entry fees and local taxes included.</span></span></li>
       </ul>
     </div>
     <div>
@@ -5806,6 +5891,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Delhi to Varanasi, the Long Way</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Gwalior</li><li class="tour-destinations__chip">Khajuraho</li><li class="tour-destinations__chip">Orchha</li><li class="tour-destinations__chip">Agra</li><li class="tour-destinations__chip">Jaipur</li><li class="tour-destinations__chip">Varanasi</li></ul></div>
       <p class="tour-overview__text">This is the long version of North India — thirteen days that trade a quick highlight reel for real depth, threading Delhi's imperial boulevards, Gwalior's hilltop fort, the UNESCO temple carvings of Khajuraho, and the moated palaces of Orchha before rejoining the familiar arc through Agra, Jaipur, and Varanasi.</p><p class="tour-overview__text">A superfast train covers the Delhi–Gwalior leg, private sedan transfers handle the rest of the roads, and two short domestic flights close the gaps between Jaipur, Varanasi, and home — so thirteen days of ground actually feels like thirteen days of travel, not transit.</p>
     </div>
   </div>
@@ -5855,7 +5941,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/best-of-north-india-day2.jpg" alt="Monuments of Old & New Delhi" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Humayun's Tomb — a UNESCO World Heritage Site built in 1570 — opens the day, followed by Jama Masjid and a rickshaw ride through Chandni Chowk's bazaar. The afternoon covers Qutub Minar and Gurudwara Bangla Sahib, one of Delhi's most prominent Sikh houses of worship.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -5939,7 +6025,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/best-of-north-india-day6.jpg" alt="Citadel on the Betwa" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Orchha sits along the boulder-strewn banks of the Betwa River. The fort complex here — Jahangir Mahal, Raj Mahal, and Rai Parveen Mahal — is one of the best-preserved in the region.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -5960,7 +6046,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/best-of-north-india-day7.jpg" alt="Journey to Agra" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>The road continues to Agra, the historic seat of the Mughal Empire. Agra Fort, a UNESCO World Heritage Site that housed the Mughal court until 1638, fills the afternoon, along with the city’s local markets.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -6002,7 +6088,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/best-of-north-india-day9.jpg" alt="Palaces & Celestial Instruments" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Hawa Mahal's five-storey lattice façade opens the day, followed by Jantar Mantar's UNESCO-listed stone astronomical instruments, the City Palace complex, and Galtaji Temple — better known as the Monkey Temple.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -6102,7 +6188,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>12 Nights Accommodation</strong><span class="tour-inclusions__detail">Double/twin sharing across 4-star hotels, 5-star hotels, and a boutique homestay.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">12 breakfasts and 4 dinners included at hotels/restaurants.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Rail & Flights</strong><span class="tour-inclusions__detail">Superfast AC train tickets for the Delhi–Gwalior leg, plus economy flights for Jaipur–Varanasi and Varanasi–Delhi.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Sedan car (Toyota Etios) with driver for every transfer and sightseeing stop.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guided Experiences</strong><span class="tour-inclusions__detail">English-speaking guides at every monument on the itinerary.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Support</strong><span class="tour-inclusions__detail">24/7 customer support for the full 13 days.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>12 Nights Accommodation</strong><span class="tour-inclusions__detail">Double/twin sharing across 4-star hotels, 5-star hotels, and a boutique homestay.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">12 breakfasts included at hotels/restaurants.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Rail & Flights</strong><span class="tour-inclusions__detail">Superfast AC train tickets for the Delhi–Gwalior leg, plus economy flights for Jaipur–Varanasi and Varanasi–Delhi.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Sedan car (Toyota Etios) with driver for every transfer and sightseeing stop.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guided Experiences</strong><span class="tour-inclusions__detail">English-speaking guides at every monument on the itinerary.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Support</strong><span class="tour-inclusions__detail">24/7 customer support for the full 13 days.</span></span></li>
       </ul>
     </div>
     <div>
@@ -6253,6 +6339,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Ghats, Temples & Old-City Lanes</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Varanasi</li></ul></div>
       <p class="tour-overview__text">Four days is enough time to see Varanasi properly — not as a day-trip stop, but as a city that rewards slowing down. This tour moves between the sacred and the everyday: dawn boat rides past eighty-four ghats, temple visits woven through the day, and an evening Ganga Aarti that never quite loses its power no matter how many times you've seen it.</p><p class="tour-overview__text">A Sarnath excursion traces the city’s Buddhist history, while a heritage walk through Varanasi’s oldest lanes and a visit to Ramnagar Fort round out a trip built entirely around the Ganges and the life along its banks.</p>
     </div>
   </div>
@@ -6302,7 +6389,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/varanasiveritabletour-day2.jpg" alt="Sunrise on the Ganges" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>A pre-dawn boat ride drifts past all eighty-four of Varanasi's historic ghats as the city wakes. The day continues on foot through Kashi Vishwanath, Annapurna, Kaal Bhairav, Sankat Mochan Hanuman, Durga, and Tulsi Manas temples.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -6323,7 +6410,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/varanasiveritabletour-day3.jpg" alt="Sarnath & the Old City" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>A short drive to Sarnath covers the Dhamek Stupa, Chaukhandi Stupa, Mulagandha Kuti Vihar, the Ashoka Pillar, and the archaeological museum. Back in Varanasi, a guided heritage walk winds through the city’s oldest alleyways.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -6344,7 +6431,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/varanasiveritabletour-day4.jpg" alt="Museums & Departure" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>After breakfast, cross the Ganges to Ramnagar Fort, the 18th-century ancestral home housing royal artifacts, vintage cars, and palanquins. A final stop at Banaras Hindu University takes in the Bharat Kala Bhavan Museum, New Vishwanath Temple, and Bharat Mata Mandir before the transfer to the airport or station.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -6360,7 +6447,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>03 Nights Accommodation</strong><span class="tour-inclusions__detail">Double-occupancy at a quality hotel in Varanasi.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">03 breakfasts, 2 lunches, and 2 dinners included.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">AC vehicle with driver for every transfer and excursion, including the Sarnath trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Ganges Boat Rides</strong><span class="tour-inclusions__detail">Private evening Ganga Aarti boat ride and a sunrise boat ride past all 84 ghats.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guided Experiences</strong><span class="tour-inclusions__detail">English-speaking guide for temple visits, the Sarnath excursion, and the old-city heritage walk.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Tickets & Taxes</strong><span class="tour-inclusions__detail">Ramnagar Fort and museum entry fees, plus all local taxes.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>03 Nights Accommodation</strong><span class="tour-inclusions__detail">Double-occupancy at a quality hotel in Varanasi.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">03 breakfasts included.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">AC vehicle with driver for every transfer and excursion, including the Sarnath trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Ganges Boat Rides</strong><span class="tour-inclusions__detail">Private evening Ganga Aarti boat ride and a sunrise boat ride past all 84 ghats.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guided Experiences</strong><span class="tour-inclusions__detail">English-speaking guide for temple visits, the Sarnath excursion, and the old-city heritage walk.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Tickets & Taxes</strong><span class="tour-inclusions__detail">Ramnagar Fort and museum entry fees, plus all local taxes.</span></span></li>
       </ul>
     </div>
     <div>
@@ -6511,6 +6598,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Nawabi Heritage to Buddhist Pilgrimage</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Lucknow</li><li class="tour-destinations__chip">Ayodhya</li><li class="tour-destinations__chip">Prayagraj</li><li class="tour-destinations__chip">Varanasi</li><li class="tour-destinations__chip">Bodhgaya</li><li class="tour-destinations__chip">Patna</li></ul></div>
       <p class="tour-overview__text">This route traces two of North India's spiritual centers of gravity in one trip — the Nawabi grandeur of Lucknow and Ayodhya's temple town, then the sacred confluence at Prayagraj and Varanasi's ghats, before crossing into Bihar for Bodhgaya, where the Buddha attained enlightenment beneath the Bodhi tree.</p><p class="tour-overview__text">Eight days, seven nights, and a private air-conditioned vehicle for every leg — closing at Rajgir and Nalanda's ancient ruins on the final drive into Patna.</p>
     </div>
   </div>
@@ -6853,6 +6941,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Across the Cold Desert of the Himalayas</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Chandigarh</li><li class="tour-destinations__chip">Manali</li><li class="tour-destinations__chip">Chandratal</li><li class="tour-destinations__chip">Kaza</li><li class="tour-destinations__chip">Tabo</li><li class="tour-destinations__chip">Langza</li></ul></div>
       <p class="tour-overview__text">Spiti is the Himalaya at its most stripped-back: a high, wind-carved cold desert where whitewashed monasteries cling to ridgelines, rivers run through pale gorges, and villages sit higher than most mountain passes elsewhere in the world. This journey reaches it the slow way, climbing out of the plains through Himachal's apple country and Manali's pine valleys before crossing into the rain shadow beyond the Rohtang range.</p><p class="tour-overview__text">Over fourteen days you will camp beside the glacial waters of Chandratal, cross the high Kunzum Pass, step inside a monastery that has been in continuous use for over a thousand years, and reach hamlets like Langza, Komic and Hikkim in the heart of the valley. Two relaxed days back in Manali at the end give tired legs a well-earned rest. Everything is arranged privately, with a driver who knows these roads, comfortable stays and an oxygen cylinder in the car.</p>
     </div>
   </div>
@@ -6923,7 +7012,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day3.jpg" alt="Chandigarh to Manali" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>The plains fall away as the road follows the Beas River up into the hills, a drive of seven to eight hours. You arrive in Manali, around 2,050 metres above sea level, in time to settle in and enjoy the cool mountain air.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -6944,7 +7033,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day4.jpg" alt="Manali at Leisure" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Spend the day gently getting used to the altitude. Soak in the natural hot springs at Vashisht village, visit the cedar-shaded Hadimba Temple dating to 1553, browse the cafes and craft shops of Old Manali, and stroll down the busy Mall Road in the evening.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -6964,8 +7053,8 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
             <div>
               <img src="assets/user-photos/spiti-valley-adventure-day5.jpg" alt="Manali to Chandratal" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
-                <p>Pass through the Atal Tunnel and drive on via Chatru, where lunch is served, and Batal, where there is time for a tea stop. Six to seven hours of waterfalls, wildflowers and widening views bring you to the camp by Chandratal, the "Moon Lake".</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span><span class="itinerary-item__meal">Dinner</span></div>
+                <p>Pass through the Atal Tunnel and drive on via Chatru and Batal, where there is time for a tea stop. Six to seven hours of waterfalls, wildflowers and widening views bring you to the camp by Chandratal, the "Moon Lake".</p>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -6986,7 +7075,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day6.jpg" alt="Chandratal to Kaza" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Start with an easy, roughly one-hour hike to the shore of Chandratal. Then continue over Kunzum Pass at about 4,550 metres, the gateway into Spiti, and follow the river down to Kaza, the valley's main settlement, some 77 km from the lake.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -7007,7 +7096,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day7.jpg" alt="Kaza to Tabo via Dhankar" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Drive down the valley via Dhankar, perched high above the confluence of the Spiti and Pin rivers, to Tabo. Its monastery, founded in 996 CE, is one of the oldest in the Himalaya, and the cave meditation chambers in the cliffs above can be explored.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -7028,7 +7117,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day8.jpg" alt="Tabo and Gue" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Take your time in Tabo's ancient assembly halls, with their fine murals, painted thankas and clay sculptures. A short excursion then reaches Gue village, home to a naturally preserved mummy believed to be several centuries old.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -7049,7 +7138,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day9.jpg" alt="Tabo to Langza" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Head back up-valley to Langza, a farming hamlet watched over by a large golden Buddha statue and a temple more than a thousand years old. The surrounding slopes are strewn with marine fossils left behind when this land lay beneath the ancient Tethys Sea.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -7070,7 +7159,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day10.jpg" alt="Komic, Hikkim & Tangyud" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>A day among the valley's loftiest settlements. Visit Komic and Hikkim, among the highest villages in the world linked by road, and Tangyud Monastery, before returning to Langza for the night at roughly 4,500 metres.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -7091,7 +7180,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day11.jpg" alt="Langza to Manali" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Retrace the route over the passes, with breakfast and a tea break at Batal on the way. Seven to eight hours later you are back in Manali, where hot showers and a proper bed are waiting.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -7112,7 +7201,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/spiti-valley-adventure-day12.jpg" alt="A Free Day in Manali" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Nothing is planned. Sleep in, revisit your favourite cafe, shop for woollens and handicrafts, or take a short walk in the nearby pine forests.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -7170,7 +7259,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>13 Nights Accommodation</strong><span class="tour-inclusions__detail">Double-occupancy hotels, camps and homestays along the route, matched to what each stretch of the journey offers.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">13 breakfasts, 1 lunch and 10 dinners across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned SUV (Toyota Innova or similar) with an experienced mountain driver for the whole journey.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Fees & Allowances</strong><span class="tour-inclusions__detail">Tolls, parking and driver allowances are all covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Safety Essentials</strong><span class="tour-inclusions__detail">A basic medical kit and an oxygen cylinder travel with you in the vehicle.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides & Entry Tickets</strong><span class="tour-inclusions__detail">Local guidance and entry tickets for the sights listed in the itinerary.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>13 Nights Accommodation</strong><span class="tour-inclusions__detail">Double-occupancy hotels, camps and homestays along the route, matched to what each stretch of the journey offers.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">13 breakfasts across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned SUV (Toyota Innova or similar) with an experienced mountain driver for the whole journey.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Fees & Allowances</strong><span class="tour-inclusions__detail">Tolls, parking and driver allowances are all covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Safety Essentials</strong><span class="tour-inclusions__detail">A basic medical kit and an oxygen cylinder travel with you in the vehicle.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides & Entry Tickets</strong><span class="tour-inclusions__detail">Local guidance and entry tickets for the sights listed in the itinerary.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
       </ul>
     </div>
     <div>
@@ -7321,6 +7410,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Forts and Tigers to Tea Hills and Backwaters</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Agra</li><li class="tour-destinations__chip">Bharatpur</li><li class="tour-destinations__chip">Ranthambore</li><li class="tour-destinations__chip">Jaipur</li><li class="tour-destinations__chip">Kochi</li><li class="tour-destinations__chip">Munnar</li><li class="tour-destinations__chip">Periyar (Thekkady)</li><li class="tour-destinations__chip">Kollam</li><li class="tour-destinations__chip">Alleppey</li></ul></div>
       <p class="tour-overview__text">India is really several countries stitched together, and this journey lets you taste two of them in a single trip. The first half belongs to the north: Delhi's old and new capitals, the Taj Mahal and Agra's red fort, the birdlife of Bharatpur, a tiger reserve around the ruins of Ranthambore, and the palaces and bazaars of Jaipur.</p><p class="tour-overview__text">Then a short flight carries you to the far south, where the mood changes completely. Fort Kochi's spice lanes give way to the tea slopes of Munnar, the elephant country of Periyar, the quiet canals of Kollam and finally a night afloat on the Alleppey backwaters. Seventeen days, one private vehicle in each region, and a pace that leaves room to breathe.</p>
     </div>
   </div>
@@ -7852,6 +7942,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Temple Towns of Tamil Nadu to the Backwaters of Kerala</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Chennai</li><li class="tour-destinations__chip">Mahabalipuram</li><li class="tour-destinations__chip">Kanchipuram</li><li class="tour-destinations__chip">Pondicherry</li><li class="tour-destinations__chip">Thanjavur</li><li class="tour-destinations__chip">Madurai</li><li class="tour-destinations__chip">Munnar</li><li class="tour-destinations__chip">Periyar (Thekkady)</li><li class="tour-destinations__chip">Kumarakom</li><li class="tour-destinations__chip">Alleppey</li><li class="tour-destinations__chip">Kochi</li></ul></div>
       <p class="tour-overview__text">South India rewards those who take their time. This journey begins on the Coromandel Coast of Tamil Nadu, where Pallava shore temples face the Bay of Bengal, a French-flavoured seaside town keeps its pastel colonial lanes, and the great Chola and Nayak temples still hum with daily ritual. Priests, flower sellers, bronze casters and street-food vendors are as much a part of the sights as the monuments themselves.</p><p class="tour-overview__text">From Madurai the road climbs into the Western Ghats and across into Kerala: tea terraces above the clouds in Munnar, a jungle lake in Periyar, village life around Kumarakom, a night afloat on the Alleppey backwaters and a last wander through the old spice quarter of Fort Kochi. Eighteen days, five-star comfort, and a private car and driver for every mile.</p>
     </div>
   </div>
@@ -8404,6 +8495,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Delhi to Ladakh, the Slow and Scenic Way</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Chandigarh</li><li class="tour-destinations__chip">Manali</li><li class="tour-destinations__chip">Jispa</li><li class="tour-destinations__chip">Leh</li><li class="tour-destinations__chip">Nubra Valley</li><li class="tour-destinations__chip">Pangong Lake</li></ul></div>
       <p class="tour-overview__text">Flying into Ladakh is quick, but driving there is a journey in itself. This route climbs step by step from the Punjab plains to Himachal's pine-clad valleys, through the Atal Tunnel into the rugged Lahaul region and then over a succession of high passes on one of the world's great mountain roads. The gradual ascent also gives your body time to adjust to the thin air before you reach Leh.</p><p class="tour-overview__text">Once in Ladakh, the pace slows down. Spend days among monasteries and palaces around Leh, cross Khardung La into the sand dunes and Bactrian camels of Nubra Valley, and spend a night beside the colour-shifting waters of Pangong Lake. With a private vehicle, comfortable stays, all permits arranged and a trusted driver at the wheel, you can focus on the views.</p>
     </div>
   </div>
@@ -8474,7 +8566,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day3.jpg" alt="Chandigarh to Manali" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>The plains give way to hills as you follow the Beas River for about 280 km, a drive of seven to eight hours, arriving in the mountain town of Manali.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8495,7 +8587,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day4.jpg" alt="Manali at Leisure" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Use the day to let your body adjust to the altitude while exploring at an easy pace. Soak in the hot springs of Vashisht village, visit the cedar-shaded Hadimba Temple, built in 1553, wander through the cafes of Old Manali and stroll along Mall Road.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8516,7 +8608,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day5.jpg" alt="Manali to Jispa" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Drive about 100 km through the 9-km Atal Tunnel, one of the longest high-altitude tunnels in the world, and emerge into the stark, wide valleys of Lahaul. Jispa, a quiet village beside the Bhaga River, is your base for the night.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8537,7 +8629,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day6.jpg" alt="Jispa to Leh" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>This is the big day: a long, dramatic drive over several high passes and across barren plateaus, with sweeping views of glaciers, multicoloured rock and empty valleys, before descending to Leh in Ladakh. Take breaks often and drink plenty of water.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8558,7 +8650,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day7.jpg" alt="Leh Town & Monasteries" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Start gently, since you have just arrived at altitude. Explore Leh Palace and the hilltop Shanti Stupa with its view across the town, then visit the monasteries at Shey and Thiksey, the latter resembling a smaller version of Tibet's Potala Palace.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8579,7 +8671,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day8.jpg" alt="The Indus Valley" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Drive along the Indus River to the Hall of Fame, a military museum honouring the Indian Army, Gurudwara Pathar Sahib, the curious Magnetic Hill, and the Sangam, where the Indus meets the Zanskar. Continue to Alchi Monastery, a rare survivor from around the eleventh century with remarkable ancient murals.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8600,7 +8692,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day9.jpg" alt="Leh to Nubra Valley" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Climb over Khardung La, one of the highest motorable roads in the world, then descend into the green Nubra Valley. Visit Diskit Monastery and its towering Maitreya Buddha statue, and in the evening ride a double-humped Bactrian camel across the sand dunes at Hunder.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8621,7 +8713,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day10.jpg" alt="Nubra Valley" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Spend a slow day in Nubra. Walk through apricot orchards and villages, relax in the Panamic hot springs and soak up views of the surrounding peaks.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8642,7 +8734,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day11.jpg" alt="Nubra Valley to Pangong Lake" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Cross the Shyok river valley and wind up to Pangong Lake, at roughly 4,350 metres. The saltwater lake, which stretches some 134 km across the border with Tibet, shifts from turquoise to deep blue to silver through the day. Take a lakeside walk or try a yak ride.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8663,7 +8755,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/by-road-through-high-passes-day12.jpg" alt="Pangong Lake to Leh" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Retrace the route toward Leh, stopping at Hemis Monastery, one of Ladakh's largest and most important monastic centres, before returning to your hotel in Leh.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8700,7 +8792,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>12 Nights Accommodation</strong><span class="tour-inclusions__detail">Comfortable 3/4-star hotels and camps throughout, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">12 breakfasts and 10 dinners across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Private car or SUV with an experienced mountain driver; tolls, fuel and parking are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides</strong><span class="tour-inclusions__detail">English-speaking guides in Leh and Nubra Valley.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Fees</strong><span class="tour-inclusions__detail">All monument entry fees for the sights listed.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Inner Line Permits</strong><span class="tour-inclusions__detail">Permits for Nubra Valley and Pangong Lake are arranged for you.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Flights</strong><span class="tour-inclusions__detail">Economy Delhi to Leh flights as part of the package, with 15 kg of checked baggage.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>12 Nights Accommodation</strong><span class="tour-inclusions__detail">Comfortable 3/4-star hotels and camps throughout, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">12 breakfasts across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Private car or SUV with an experienced mountain driver; tolls, fuel and parking are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides</strong><span class="tour-inclusions__detail">English-speaking guides in Leh and Nubra Valley.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Fees</strong><span class="tour-inclusions__detail">All monument entry fees for the sights listed.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Inner Line Permits</strong><span class="tour-inclusions__detail">Permits for Nubra Valley and Pangong Lake are arranged for you.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Flights</strong><span class="tour-inclusions__detail">Economy Delhi to Leh flights as part of the package, with 15 kg of checked baggage.</span></span></li>
       </ul>
     </div>
     <div>
@@ -8851,6 +8943,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Great Monuments, Village Lanes and Painted Havelis</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Agra</li><li class="tour-destinations__chip">Talabgaon</li><li class="tour-destinations__chip">Jaipur</li><li class="tour-destinations__chip">Mandawa</li></ul></div>
       <p class="tour-overview__text">The Golden Triangle of Delhi, Agra and Jaipur is India's classic introduction, and this itinerary does it justice before adding something the usual circuit skips: a look at the countryside in between. Between the marble of the Taj Mahal and the pink walls of Jaipur, you slow down in a village near Talabgaon, stopping on the way at one of India's most astonishing stepwells.</p><p class="tour-overview__text">After Jaipur's forts and palaces, the journey turns north-west into the Shekhawati region, often called Rajasthan's open-air art gallery, where merchant mansions in Mandawa are covered in painted murals. Ten days, a private vehicle and driver, English-speaking guides, and stays in luxury and heritage hotels, including a night in a fort-turned-palace.</p>
     </div>
   </div>
@@ -8942,7 +9035,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/golden-triangle-rustic-rajasthan-day4.jpg" alt="The Taj Mahal & Chand Baori" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Visit the Taj Mahal first thing, when the marble glows in early light. (The Taj is closed on Fridays, so we adjust the order of the day if needed.) Then drive on into Rajasthan, stopping at Chand Baori, a spectacular stepwell of 3,500 steps built around the eighth or ninth century, before reaching the village of Talabgaon.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -8962,8 +9055,8 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
             <div>
               <img src="assets/user-photos/golden-triangle-rustic-rajasthan-day5.jpg" alt="Village Life & On to Jaipur" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
-                <p>Spend the morning getting a feel for everyday village life around Talabgaon, walking the lanes and meeting local people. After lunch, continue to Jaipur, the Pink City. A drive of a few hours brings you to your hotel.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+                <p>Spend the morning getting a feel for everyday village life around Talabgaon, walking the lanes and meeting local people. Continue to Jaipur, the Pink City. A drive of a few hours brings you to your hotel.</p>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9005,7 +9098,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/golden-triangle-rustic-rajasthan-day7.jpg" alt="Jaipur to Mandawa" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Head north-west into the semi-desert Shekhawati region, stopping at Nawalgarh to see its richly painted havelis, the elaborate mansions built by wealthy merchant families. Arrive in Mandawa and settle into your fort hotel.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9026,7 +9119,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/golden-triangle-rustic-rajasthan-day8.jpg" alt="Mandawa's Painted Havelis" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Explore Mandawa on foot, where nearly every street is lined with havelis decorated with colourful frescoes of gods, soldiers, trains and even early cars. Visit Castle Mandawa, a heritage fort-palace, and soak up the unhurried pace of the old trading town.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9084,7 +9177,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>9 Nights Accommodation</strong><span class="tour-inclusions__detail">Five-star and heritage hotels throughout, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">9 breakfasts, 2 lunches and 3 dinners across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned SUV (Toyota Innova Crysta or similar) with a driver; tolls, parking and driver allowances are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guide</strong><span class="tour-inclusions__detail">English-speaking guide for the sightseeing days.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Fees & Experiences</strong><span class="tour-inclusions__detail">Monument entrance fees, the Chandni Chowk rickshaw ride, a blue pottery workshop and a market walk.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>9 Nights Accommodation</strong><span class="tour-inclusions__detail">Five-star and heritage hotels throughout, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">9 breakfasts across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned SUV (Toyota Innova Crysta or similar) with a driver; tolls, parking and driver allowances are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guide</strong><span class="tour-inclusions__detail">English-speaking guide for the sightseeing days.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Fees & Experiences</strong><span class="tour-inclusions__detail">Monument entrance fees, the Chandni Chowk rickshaw ride, a blue pottery workshop and a market walk.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
       </ul>
     </div>
     <div>
@@ -9235,6 +9328,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Shore Temples, Chola Giants & the Heart of Tamil Nadu</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Mahabalipuram</li><li class="tour-destinations__chip">Kanchipuram</li><li class="tour-destinations__chip">Pondicherry</li><li class="tour-destinations__chip">Thanjavur</li><li class="tour-destinations__chip">Madurai</li></ul></div>
       <p class="tour-overview__text">Tamil Nadu holds some of the oldest living temple traditions on earth, and this week-long route is built around them. Begin on the coast among the carved stone monuments of Mahabalipuram, detour inland to the temple town of Kanchipuram, then enjoy the pastel French quarter of Pondicherry before heading into the heartland of the Chola and Nayak kingdoms.</p><p class="tour-overview__text">Thanjavur's soaring Brihadeeshwara and the vast river-island shrine at Srirangam lead to Madurai, where the Meenakshi Amman Temple still anchors daily life from dawn to the last evening ceremony. With a private car and driver, English-speaking guides at the monuments and a guided food walk in Madurai, it is a compact, comfortable way to experience the south's devotion, craft and cuisine.</p>
     </div>
   </div>
@@ -9326,7 +9420,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/the-temple-run-day4.jpg" alt="Pondicherry to Thanjavur" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>A scenic drive inland brings you to Thanjavur. Tour the Royal Palace and its museum, home to a fine collection of Chola bronzes, and in the evening watch the ritual pooja at the immense Brihadeeshwara Temple as lamps are lit and bells ring.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9347,7 +9441,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/the-temple-run-day5.jpg" alt="Thanjavur to Madurai" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Break the journey at Tiruchirappalli to visit the Sri Ranganathaswamy Temple at Srirangam, a sprawling temple complex on a river island with towering gateways and courtyards. Continue to Madurai and settle in for the night.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9368,7 +9462,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/the-temple-run-day6.jpg" alt="Madurai" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Start at the busy flower market, where garlands for the temple are strung by hand. Visit the Meenakshi Amman Temple, whose gateways are crowded with thousands of painted figures, then join a guided food tour of Madurai's famous street stalls. In the evening, return for the closing pooja ceremony.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9405,7 +9499,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>6 Nights Accommodation</strong><span class="tour-inclusions__detail">Comfortable 3/4-star and heritage hotels, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">6 breakfasts and 3 dinners across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned private car with a driver; tolls and parking are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides</strong><span class="tour-inclusions__detail">English-speaking guides at the monuments.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Tickets</strong><span class="tour-inclusions__detail">Monument entry tickets for the sights listed in the itinerary.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Madurai Food Tour</strong><span class="tour-inclusions__detail">A guided food walk through the city's street-food stalls.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>6 Nights Accommodation</strong><span class="tour-inclusions__detail">Comfortable 3/4-star and heritage hotels, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">6 breakfasts across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned private car with a driver; tolls and parking are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides</strong><span class="tour-inclusions__detail">English-speaking guides at the monuments.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Entry Tickets</strong><span class="tour-inclusions__detail">Monument entry tickets for the sights listed in the itinerary.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Madurai Food Tour</strong><span class="tour-inclusions__detail">A guided food walk through the city's street-food stalls.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
       </ul>
     </div>
     <div>
@@ -9556,6 +9650,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Ladakh's Monasteries, Dunes and High-Altitude Lakes</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Leh</li><li class="tour-destinations__chip">Nubra Valley</li><li class="tour-destinations__chip">Pangong Lake</li></ul></div>
       <p class="tour-overview__text">Ladakh feels like another planet: a vast, high-altitude desert of barren ridges, deep blue skies and whitewashed monasteries perched on rocky outcrops. This nine-day itinerary reaches it by air, so you spend your time in the mountains rather than on the road, with the first days built around slowly adjusting to the altitude.</p><p class="tour-overview__text">Around Leh you will visit palaces, ancient gompas and viewpoints. Then you cross Khardung La, one of the highest motorable passes in the world, to the sand dunes and camels of Nubra Valley, before continuing on to the shimmering waters of Pangong Lake. Flights, permits, a private vehicle and driver, and comfortable stays are all arranged so you can focus on the scenery.</p>
     </div>
   </div>
@@ -9605,7 +9700,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heavenly-himalayas-day2.jpg" alt="Fly to Leh" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Take the morning flight over the Himalaya and land in Leh at over 3,000 metres. Your hotel is a short transfer away. Spend the day resting, drinking plenty of water and letting your body adjust. This slow start is essential for the days ahead.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9626,7 +9721,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heavenly-himalayas-day3.jpg" alt="Leh Palace & Monasteries" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Once acclimatised, explore the region around Leh. Visit the old Leh Palace, the royal residence of the Ladakhi kings, then continue to Shey Palace and the impressive Thiksey Monastery, rising in tiers up a hillside above the Indus valley.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9647,7 +9742,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heavenly-himalayas-day4.jpg" alt="Sights Around Leh" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Learn the story of the Indian Army in Ladakh at the Hall of Fame museum, then visit Gurudwara Pathar Sahib and the baffling Magnetic Hill. At Sangam, watch the Indus and Zanskar rivers merge, then continue to Alchi, an eleventh-century monastery with beautiful old murals. The day ends with sunset views from Shanti Stupa.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9668,7 +9763,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heavenly-himalayas-day5.jpg" alt="Leh to Nubra Valley" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Climb to Khardung La, among the highest motorable roads in the world, and then drop into the green, sheltered Nubra Valley, a drive of around 159 km. Settle into your camp or lodge for the night.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9689,7 +9784,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heavenly-himalayas-day6.jpg" alt="Nubra Valley" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Visit Diskit Monastery and its giant Maitreya Buddha. At Hunder, ride a Bactrian camel over the rippling sand dunes, high above sea level. Relax in the Panamic hot springs before returning to your accommodation.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9710,7 +9805,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heavenly-himalayas-day7.jpg" alt="Nubra to Pangong Lake" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Drive through a landscape of rock, river and sky to Pangong Lake, at roughly 4,350 metres. The saltwater lake looks different at every hour, from clear turquoise to deep blue. Take a walk along the shore or try a yak safari, and stay overnight on the lakeshore.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9731,7 +9826,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heavenly-himalayas-day8.jpg" alt="Pangong Lake to Leh" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Retrace your route towards Leh, with a stop at Hemis Monastery, one of Ladakh's largest monastic institutions. Return to your hotel in Leh for a comfortable final night.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -9768,7 +9863,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>8 Nights Accommodation</strong><span class="tour-inclusions__detail">Comfortable 4/5-star hotels and camps, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">8 breakfasts and 7 dinners across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Flights</strong><span class="tour-inclusions__detail">Economy Delhi to Leh and Leh to Delhi flights, with 15 kg of checked baggage.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Private car or SUV with a driver for all transfers and sightseeing.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides</strong><span class="tour-inclusions__detail">English-speaking guides, except at Pangong Lake.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Inner Line Permits</strong><span class="tour-inclusions__detail">Permits for Nubra Valley and Pangong Lake are arranged for you.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>8 Nights Accommodation</strong><span class="tour-inclusions__detail">Comfortable 4/5-star hotels and camps, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">8 breakfasts across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Flights</strong><span class="tour-inclusions__detail">Economy Delhi to Leh and Leh to Delhi flights, with 15 kg of checked baggage.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Private car or SUV with a driver for all transfers and sightseeing.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides</strong><span class="tour-inclusions__detail">English-speaking guides, except at Pangong Lake.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Inner Line Permits</strong><span class="tour-inclusions__detail">Permits for Nubra Valley and Pangong Lake are arranged for you.</span></span></li>
       </ul>
     </div>
     <div>
@@ -9919,6 +10014,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Forts, Palaces and Lakes of Royal Rajasthan</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Agra</li><li class="tour-destinations__chip">Jaipur</li><li class="tour-destinations__chip">Pushkar</li><li class="tour-destinations__chip">Jodhpur</li><li class="tour-destinations__chip">Udaipur</li></ul></div>
       <p class="tour-overview__text">Rajasthan is the India of postcards, and this eleven-day route gathers its best chapters into a single, well-paced journey. It begins in Delhi among Mughal tombs and busy old-city lanes, visits the Taj Mahal at Agra, then moves into the desert state proper: pink-walled Jaipur and its hilltop forts, the sacred lake town of Pushkar, blue-washed Jodhpur beneath its mighty fortress, and finally lake-side Udaipur.</p><p class="tour-overview__text">Along the way you will stop at an ancient stepwell, walk through bazaars, join a sunset boat ride on Lake Pichola and watch a folk dance show in an old haveli. Stays are in five-star and heritage hotels, a private vehicle and driver covers every mile, and knowledgeable guides bring the stories behind each palace and fort to life.</p>
     </div>
   </div>
@@ -10052,7 +10148,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heritage-streets-day6.jpg" alt="Jaipur to Pushkar" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Drive west to Pushkar, a small pilgrimage town around a holy lake. Visit the Brahma Temple, one of very few in India dedicated to the creator god, walk beside the lake's many ghats, and explore the lively market.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -10115,7 +10211,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/heritage-streets-day9.jpg" alt="Jodhpur to Udaipur" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Make the day's drive through the Aravalli hills, stopping at the exquisite Ranakpur Jain Temple, its forest of intricately carved marble pillars. Arrive in Udaipur and visit Fateh Sagar Lake and the landscaped garden of Sahelion ki Badi.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -10173,7 +10269,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>10 Nights Accommodation</strong><span class="tour-inclusions__detail">Five-star and heritage hotels throughout, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">10 breakfasts and 2 lunches across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned SUV (Toyota Innova Crysta or similar) with a driver; tolls, parking and driver allowances are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides & Entry Fees</strong><span class="tour-inclusions__detail">Sightseeing with guides, plus all monument entrance fees.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Experiences</strong><span class="tour-inclusions__detail">Chandni Chowk rickshaw ride, a guided Pink City walk, a Lake Pichola sunset cruise and entry to the Dharohar folk dance show.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>10 Nights Accommodation</strong><span class="tour-inclusions__detail">Five-star and heritage hotels throughout, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">10 breakfasts across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned SUV (Toyota Innova Crysta or similar) with a driver; tolls, parking and driver allowances are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides & Entry Fees</strong><span class="tour-inclusions__detail">Sightseeing with guides, plus all monument entrance fees.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Experiences</strong><span class="tour-inclusions__detail">Chandni Chowk rickshaw ride, a guided Pink City walk, a Lake Pichola sunset cruise and entry to the Dharohar folk dance show.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
       </ul>
     </div>
     <div>
@@ -10324,6 +10420,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
     <div>
       <p class="eyebrow">About This Trip</p>
       <h2 class="tour-overview__heading">Monuments, a Hill Fort and Tigers in the Wild</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Delhi</li><li class="tour-destinations__chip">Agra</li><li class="tour-destinations__chip">Ranthambore</li><li class="tour-destinations__chip">Jaipur</li></ul></div>
       <p class="tour-overview__text">This itinerary pairs the Golden Triangle's greatest hits with the thrill of looking for a wild tiger. You begin in Delhi among Mughal tombs and old-city lanes, take a comfortable train to Agra for its fort, jewel-box tombs and the Taj Mahal, and then leave the main tourist road behind for a stay at a remote hill fort.</p><p class="tour-overview__text">From there it is on to Ranthambore National Park, where open jeeps wind through dry forest and past lakes in search of the park's famous big cats. The trip finishes in Jaipur, with its bazaars, palaces and hilltop forts. Nine days, a private vehicle in Rajasthan, expert guides and luxurious stays make this a rewarding blend of culture and nature.</p>
     </div>
   </div>
@@ -10415,7 +10512,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/golden-triangle-roaring-ranthambhore-day4.jpg" alt="The Taj Mahal & Ramathra Fort" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Visit the Taj Mahal in the soft early light. (It is closed on Fridays, so we adjust the order of the day if needed.) Then drive into Rajasthan to Ramathra, where you tour the old hill fort and stay at the resort within its walls.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -10436,7 +10533,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/golden-triangle-roaring-ranthambhore-day5.jpg" alt="Ramathra to Ranthambore" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Travel on to Ranthambore, arriving in time to settle into your lodge. In the afternoon, climb aboard a private open jeep for your first safari, exploring the park's lakes, grasslands and fort ruins in search of tigers.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -10457,7 +10554,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/golden-triangle-roaring-ranthambhore-day6.jpg" alt="Ranthambore Safari" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>Start early for a second private jeep safari, when the forest wakes up and wildlife is at its most active. Look out for tigers, leopards, sloth bears, deer, crocodiles and an array of birds. Spend the rest of the day relaxing at your lodge. (The park is closed from July to September, during the monsoon.)</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span><span class="itinerary-item__meal">Dinner</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -10499,7 +10596,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <img src="assets/user-photos/golden-triangle-roaring-ranthambhore-day8.jpg" alt="Forts & Palaces of Jaipur" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
               <div class="itinerary-item__copy">
                 <p>A full day of Jaipur's landmarks: the honeycombed Hawa Mahal, the giant astronomical instruments of Jantar Mantar, the City Palace, and the Jal Mahal seemingly afloat in its lake. Ascend to Amer Fort for sweeping views and finish at Nahargarh Fort overlooking the city.</p>
-                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span></div>
               </div>
             </div>
           </div>
@@ -10536,7 +10633,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <p class="eyebrow">What's Included</p>
       <h2 class="section-heading">Inclusions</h2>
       <ul class="tour-inclusions__list">
-        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>8 Nights Accommodation</strong><span class="tour-inclusions__detail">Five-star and heritage hotels throughout, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">8 breakfasts, 4 lunches and 3 dinners across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned SUV with a driver; tolls and parking are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Train Journey</strong><span class="tour-inclusions__detail">Air-conditioned train ticket from Delhi to Agra.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides & Entry Fees</strong><span class="tour-inclusions__detail">English-speaking guides throughout, plus monument entrance fees.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Experiences</strong><span class="tour-inclusions__detail">Two private jeep safaris in Ranthambore, a Chandni Chowk rickshaw ride, a blue pottery workshop and a Pink City walking tour.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>8 Nights Accommodation</strong><span class="tour-inclusions__detail">Five-star and heritage hotels throughout, in double occupancy.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">8 breakfasts across the trip.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Private Transportation</strong><span class="tour-inclusions__detail">Air-conditioned SUV with a driver; tolls and parking are covered.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Train Journey</strong><span class="tour-inclusions__detail">Air-conditioned train ticket from Delhi to Agra.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Guides & Entry Fees</strong><span class="tour-inclusions__detail">English-speaking guides throughout, plus monument entrance fees.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Experiences</strong><span class="tour-inclusions__detail">Two private jeep safaris in Ranthambore, a Chandni Chowk rickshaw ride, a blue pottery workshop and a Pink City walking tour.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Local Taxes</strong><span class="tour-inclusions__detail">All applicable local taxes are included in the package.</span></span></li>
       </ul>
     </div>
     <div>
@@ -11196,6 +11293,120 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 
 </section>
+<section class="spa-page" id="spa-page-blue-city-walk" hidden>
+
+
+<section class="daytour-hero" style="background-image:url('assets/user-photos/blue-city-walk-hero.jpg')">
+  <div class="daytour-hero__overlay"></div>
+  <div class="container daytour-hero__content">
+    <p class="daytour-hero__crumb">Home / Day Tours / Blue City Walk</p>
+    <p class="daytour-hero__eyebrow">Jodhpur · Blue City Walk</p>
+    <h1 class="daytour-hero__title">Blue City Walk</h1>
+    <p class="daytour-hero__tagline">The Jodhpur only locals know</p>
+    <div class="daytour-hero__stats">
+      <div class="daytour-hero__stat"><span class="daytour-hero__stat-label">Duration</span><span class="daytour-hero__stat-value">2.5 Hours</span></div>
+      <div class="daytour-hero__stat"><span class="daytour-hero__stat-label">Start</span><span class="daytour-hero__stat-value">Clock Tower, Jodhpur</span></div>
+      
+    </div>
+  </div>
+</section>
+
+<div class="container daytour-snapshot-wrap">
+  <div class="daytour-snapshot reveal is-visible">
+    <div class="daytour-snapshot__facts">
+      <div class="daytour-snapshot__fact"><span class="daytour-snapshot__label">Duration</span><span class="daytour-snapshot__value">2.5 Hours</span></div>
+      <div class="daytour-snapshot__fact"><span class="daytour-snapshot__label">Group Size</span><span class="daytour-snapshot__value">15 people max</span></div>
+      <div class="daytour-snapshot__fact"><span class="daytour-snapshot__label">Min Age</span><span class="daytour-snapshot__value">4+ years</span></div>
+    </div>
+    <div class="daytour-snapshot__price">
+      <div>
+        <span class="daytour-snapshot__price-value daytour-snapshot__price-value--muted">Price on request</span>
+      </div>
+      <a href="#enquire" class="btn btn--orange">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<section class="section daytour-intro">
+  <div class="container daytour-intro__grid">
+    <div class="daytour-intro__photo reveal is-visible">
+      <img src="assets/user-photos/blue-city-walk-intro.jpg" alt="Blue City Walk" />
+    </div>
+    <div class="reveal is-visible">
+      <p class="eyebrow">About This Experience</p>
+      <h2 class="daytour-intro__heading">Blue City Walk</h2>
+      <p class="daytour-intro__text">Not sure what to do in Jodhpur beyond the fort and the palace? This walk, led by an expert guide who loves their hometown, shows you the city’s best-kept secrets and the lively local scenes that only residents know about.</p><p class="daytour-intro__text">Wander lanes where the houses are washed in indigo, haggle at the century-old Clock Tower market, and photograph a stepwell that is nearly 300 years old. Finish with a glass of Makhaniya lassi, which many travellers rate among the best in India.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sage-soft daytour-features">
+  <div class="container">
+    <div class="daytour-features__head reveal is-visible">
+      <p class="eyebrow">Why It's Worth The Early Start</p>
+      <h2 class="section-heading">What Makes It Special</h2>
+    </div>
+    <div class="daytour-features__grid">
+      <div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M3 17h14M4 17V8.5L10 4l6 4.5V17M7.5 17v-5h5v5" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">The Blue City Lanes</h3><p class="daytour-feature-card__text">Walk the neighbourhoods where houses are painted indigo, one of Jodhpur’s most recognisable sights.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M4 7.5h12l-1 9a1.5 1.5 0 0 1-1.5 1.3h-7A1.5 1.5 0 0 1 5 16.5l-1-9Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M7 7.5V6a3 3 0 0 1 6 0v1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span><h3 class="daytour-feature-card__title">Clock Tower Market</h3><p class="daytour-feature-card__text">A century-old bazaar of spices, tea, tie-and-dye fabrics, lacquered bangles and handicrafts, ideal for testing your bargaining skills.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M3 17h14M4 17V8.5L10 4l6 4.5V17M7.5 17v-5h5v5" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">A Nearly 300-Year-Old Stepwell</h3><p class="daytour-feature-card__text">One of the city’s most photogenic spots, and a window into how Jodhpur once stored its water.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2.5c1.2 1.6 1.2 3-.2 4.3M10 2.5c-1.2 1.6-1.2 3 .2 4.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M10 7v10M5 17h10M6.5 17l1-6h5l1 6" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">An Ancient Temple</h3><p class="daytour-feature-card__text">Step inside a local temple on the route for a quieter look at everyday devotion.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M5 3v6a3 3 0 0 0 3 3v5M5 3v5M7 3v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M14 3c-1.4 0-2.4 1.6-2.4 4s1 4 2.4 4v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">Makhaniya Lassi</h3><p class="daytour-feature-card__text">Sip the city’s iconic creamy lassi, a favourite of travellers and locals alike.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section daytour-stops">
+  <div class="container">
+    <div class="daytour-stops__head reveal is-visible">
+      <p class="eyebrow">The Route</p>
+      <h2 class="section-heading">Stop by Stop</h2>
+    </div>
+    <ol class="daytour-stops__list">
+      <li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">1</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Meet at the Clock Tower</h3><p class="daytour-stop__text">Your licensed local guide greets the group at the Clock Tower, where the walk begins.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">2</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Blue City Walk</h3><p class="daytour-stop__text">Stroll through the indigo-washed neighbourhoods and lively local scenes that most visitors never see.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">3</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Temple Visit</h3><p class="daytour-stop__text">Pause at an ancient temple along the way.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">4</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">The Stepwell</h3><p class="daytour-stop__text">Visit the nearly 300-year-old stepwell, a favourite stop for photographs.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">5</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Clock Tower Market</h3><p class="daytour-stop__text">Browse the century-old market for spices, tea, tie-and-dye fabrics, lacquered bangles and handicrafts, and finish with a Makhaniya lassi.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">6</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Finish at the Clock Tower</h3><p class="daytour-stop__text">The walk ends where it began, about two and a half hours after the start.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--cream daytour-lists">
+  <div class="container daytour-lists__grid">
+    <div class="reveal is-visible">
+      <h2 class="daytour-lists__heading">What's Included</h2>
+      <ul class="daytour-lists__list">
+        <li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Blue City walk</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Clock Tower local market walk</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Stepwell visit</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Temple visit</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Services of a licensed tour guide</li>
+      </ul>
+    </div>
+    <div class="reveal is-visible">
+      <h2 class="daytour-lists__heading">A Few Things to Know</h2>
+      <ul class="daytour-lists__list">
+        <li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Getting around: on foot, with an auto rickshaw for part of the route</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Physical effort 2/5 and culture shock 3/5; suitable for ages 4 to 75</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Starts and finishes at the Clock Tower; transfers to and from the meeting point are not included</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Tips and gratuities for the local guide are not included</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Dress respectfully in loose clothing that covers your shoulders and knees, with comfortable walking shoes or sturdy sandals</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Bring a sunhat, sunscreen, sunglasses, wipes and hand sanitiser</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="daytour-cta">
+  <div class="container daytour-cta__inner">
+    <div class="reveal is-visible">
+      <p class="eyebrow">Ready When You Are</p>
+      <h2 class="daytour-cta__title">Blue City Walk &mdash; Price on Request</h2>
+      <p class="daytour-cta__text">2.5 Hours · 15 people max · 4+ years</p>
+    </div>
+    <a href="#enquire" class="btn btn--orange daytour-cta__btn">Book Now</a>
+  </div>
+</section>
+
+<section class="section daytour-related">
+  <div class="container">
+    <div class="daytour-related__head reveal is-visible">
+      <h2 class="section-heading">More Day Tours</h2>
+    </div>
+    <div class="daytour-related__grid">
+      <article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/jaipur-walks-hero.jpg" alt="Pedals into the heart of pink city" /><span class="daytour-related-card__badge">3 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Pedals into the heart of pink city</p><a href="jaipur-walks.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/food.jpg" alt="Varanasi Food Tour" /><span class="daytour-related-card__badge">2.5 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Varanasi Food Tour</p><a href="food-walk-varanasi.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/varanasi-silk-walk-hero.jpg" alt="Varanasi Silk Walk" /><span class="daytour-related-card__badge">2 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Varanasi Silk Walk</p><a href="varanasi-silk-walk.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article>
+    </div>
+  </div>
+</section>
+
+
+</section>
 <section class="spa-page" id="spa-page-sailing-camping-varanasi" hidden>
 
 
@@ -11442,7 +11653,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 <script>
 (function () {
-  var ROUTES = {"index.html": "home", "./": "home", "": "home", "homepage.html": "home", "destinations.html": "destinations", "day-tours.html": "day-tours", "kerala-tour.html": "kerala-tour", "indias-golden-triangle.html": "indias-golden-triangle", "best-of-north-india.html": "best-of-north-india", "varanasiveritabletour.html": "varanasiveritabletour", "lucknow-to-bodhgaya.html": "lucknow-to-bodhgaya", "spiti-valley-adventure.html": "spiti-valley-adventure", "a-bit-of-north-and-south.html": "a-bit-of-north-and-south", "southern-splendors.html": "southern-splendors", "by-road-through-high-passes.html": "by-road-through-high-passes", "golden-triangle-rustic-rajasthan.html": "golden-triangle-rustic-rajasthan", "the-temple-run.html": "the-temple-run", "heavenly-himalayas.html": "heavenly-himalayas", "heritage-streets.html": "heritage-streets", "golden-triangle-roaring-ranthambhore.html": "golden-triangle-roaring-ranthambhore", "jaipur-walks.html": "jaipur-walks", "food-walk-varanasi.html": "food-walk-varanasi", "varanasi-silk-walk.html": "varanasi-silk-walk", "subah-e-banaras.html": "subah-e-banaras", "sarnath-walk.html": "sarnath-walk", "sailing-camping-varanasi.html": "sailing-camping-varanasi", "blog.html": "blog"};
+  var ROUTES = {"index.html": "home", "./": "home", "": "home", "homepage.html": "home", "destinations.html": "destinations", "day-tours.html": "day-tours", "kerala-tour.html": "kerala-tour", "indias-golden-triangle.html": "indias-golden-triangle", "best-of-north-india.html": "best-of-north-india", "varanasiveritabletour.html": "varanasiveritabletour", "lucknow-to-bodhgaya.html": "lucknow-to-bodhgaya", "spiti-valley-adventure.html": "spiti-valley-adventure", "a-bit-of-north-and-south.html": "a-bit-of-north-and-south", "southern-splendors.html": "southern-splendors", "by-road-through-high-passes.html": "by-road-through-high-passes", "golden-triangle-rustic-rajasthan.html": "golden-triangle-rustic-rajasthan", "the-temple-run.html": "the-temple-run", "heavenly-himalayas.html": "heavenly-himalayas", "heritage-streets.html": "heritage-streets", "golden-triangle-roaring-ranthambhore.html": "golden-triangle-roaring-ranthambhore", "jaipur-walks.html": "jaipur-walks", "food-walk-varanasi.html": "food-walk-varanasi", "varanasi-silk-walk.html": "varanasi-silk-walk", "subah-e-banaras.html": "subah-e-banaras", "sarnath-walk.html": "sarnath-walk", "blue-city-walk.html": "blue-city-walk", "sailing-camping-varanasi.html": "sailing-camping-varanasi", "blog.html": "blog"};
   var VALID = {};
   Object.keys(ROUTES).forEach(function (k) { VALID[ROUTES[k]] = true; });
 
@@ -13296,6 +13507,33 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 <script>
 (function(){
   var root = document.getElementById('spa-page-sarnath-walk');
+  if (!root) return;
+
+(function () {
+
+  // Enquiry form — routes every submission to info@tournivaljourneys.com
+  // via the visitor's own mail client, so all enquiries land in one inbox.
+  root.querySelectorAll('form.footer__form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = form.elements['name'] ? form.elements['name'].value : '';
+      var email = form.elements['email'] ? form.elements['email'].value : '';
+      var message = form.elements['message'] ? form.elements['message'].value : '';
+      var subject = 'New enquiry from ' + name;
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      window.location.href = 'mailto:info@tournivaljourneys.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var btn = form.querySelector('button');
+      if (btn) btn.textContent = 'Thank you!';
+    });
+  });
+})();
+
+})();
+
+</script>
+<script>
+(function(){
+  var root = document.getElementById('spa-page-blue-city-walk');
   if (!root) return;
 
 (function () {
