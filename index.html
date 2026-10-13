@@ -4042,11 +4042,13 @@ button {
   .tour-destinations__chip { font-size: 13px; padding: 8px 12px; }
 }
 
-/* Homepage day-tour grid: a lone last card (7th, 3-col layout) is centred */
+/* Homepage day-tour grid: 6-column track so a short last row is centred
+   (works for any count: 7 -> one centred card, 8 -> two centred cards) */
 @media (min-width: 961px) {
-  .daytours__grid > .daytour-card:last-child:nth-child(3n + 1) {
-    grid-column: 2;
-  }
+  .daytours__grid { grid-template-columns: repeat(6, 1fr); }
+  .daytours__grid > .daytour-card { grid-column: span 2; }
+  .daytours__grid > .daytour-card:last-child:nth-child(3n + 1) { grid-column: 3 / span 2; }
+  .daytours__grid > .daytour-card:nth-last-child(2):nth-child(3n + 1) { grid-column: 2 / span 2; }
 }
 
 body { background: var(--color-cream, #f8f7f2); }
@@ -4226,6 +4228,22 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         <div class="daytour-card__foot">
           <p>Blue City Walk, Jodhpur</p>
           <a href="blue-city-walk.html" class="btn btn--orange">Explore</a>
+        </div>
+      </div>
+      <div class="daytour-card reveal" style="transition-delay:0.56s">
+        <img src="assets/user-photos/heritage-spiritual-walk-hero.jpg" alt="Heritage &amp; Spiritual Walk, Varanasi" />
+        <div class="daytour-card__scrim"></div>
+        <div class="daytour-card__foot">
+          <p>Heritage &amp; Spiritual Walk</p>
+          <a href="heritage-spiritual-walk.html" class="btn btn--orange">Explore</a>
+        </div>
+      </div>
+      <div class="daytour-card reveal" style="transition-delay:0.64s">
+        <img src="assets/user-photos/morning-street-walk-hero.jpg" alt="Morning Street Walk, Varanasi" />
+        <div class="daytour-card__scrim"></div>
+        <div class="daytour-card__foot">
+          <p>Morning Street Walk</p>
+          <a href="morning-street-walk.html" class="btn btn--orange">Explore</a>
         </div>
       </div>
     </div>
@@ -5079,6 +5097,72 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
             </div>
             <div class="daytour-page-card__actions">
               <a href="blue-city-walk.html" class="btn btn--outline">View Details</a>
+              <a href="#enquire" class="btn btn--orange">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="daytour-page-card" id="day-tours-heritage-spiritual-walk">
+        <div class="daytour-page-card__media">
+          <img src="assets/user-photos/heritage-spiritual-walk-hero.jpg" alt="Heritage &amp; Spiritual Walk, Varanasi" />
+          <span class="daytour-page-card__badge">2.5 Hours</span>
+        </div>
+        <div class="daytour-page-card__body">
+          <div>
+            <h3 class="daytour-page-card__title">Heritage &amp; Spiritual Walk</h3>
+            <p class="daytour-page-card__tagline">The mystic heart of Varanasi, on foot</p>
+          </div>
+          <div class="daytour-page-card__facts">
+            <span class="daytour-page-card__fact">Easy walking pace</span>
+            <span class="daytour-page-card__fact">12 people max</span>
+          </div>
+          <p class="daytour-page-card__desc">Walk through Varanasi&rsquo;s temples, puzzling alleys and bustling bazaars with a local guide, pass through the Kashi Vishwanath corridor and stroll the ghats where pilgrims, priests, boatmen and chai sellers share the riverfront.</p>
+          <ul class="daytour-page-card__highlights">
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Iconic landmarks &amp; temples of the old city</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Kashi Vishwanath (golden temple) corridor</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Walk along the ghats</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chai stop &amp; English-speaking guide</li>
+          </ul>
+          <div class="daytour-page-card__foot">
+            <div class="daytour-page-card__price">
+              <span class="daytour-page-card__price-value daytour-page-card__price-value--muted">Price on request</span>
+            </div>
+            <div class="daytour-page-card__actions">
+              <a href="heritage-spiritual-walk.html" class="btn btn--outline">View Details</a>
+              <a href="#enquire" class="btn btn--orange">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="daytour-page-card" id="day-tours-morning-street-walk">
+        <div class="daytour-page-card__media">
+          <img src="assets/user-photos/morning-street-walk-hero.jpg" alt="Morning Street Walk, Varanasi" />
+          <span class="daytour-page-card__badge">2&ndash;2.5 Hours</span>
+        </div>
+        <div class="daytour-page-card__body">
+          <div>
+            <h3 class="daytour-page-card__title">Morning Street Walk</h3>
+            <p class="daytour-page-card__tagline">Varanasi at its most alive, before the day begins</p>
+          </div>
+          <div class="daytour-page-card__facts">
+            <span class="daytour-page-card__fact">Early morning start</span>
+            <span class="daytour-page-card__fact">3&ndash;12 people</span>
+          </div>
+          <p class="daytour-page-card__desc">Follow the streets of Varanasi as the city wakes &mdash; pilgrims bathing in the Ganges, morning chanting, ashrams and old heritage buildings &mdash; with masala chai, a snack and a pan shop stop along the way.</p>
+          <ul class="daytour-page-card__highlights">
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Street life, ashrams &amp; morning chanting</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Street chai &amp; aalu kachori</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Old heritage buildings &amp; bazaars</li>
+            <li><span class="daytour-page-card__check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>English/Hindi guide &amp; one-way transport</li>
+          </ul>
+          <div class="daytour-page-card__foot">
+            <div class="daytour-page-card__price">
+              <span class="daytour-page-card__price-value daytour-page-card__price-value--muted">Price on request</span>
+            </div>
+            <div class="daytour-page-card__actions">
+              <a href="morning-street-walk.html" class="btn btn--outline">View Details</a>
               <a href="#enquire" class="btn btn--orange">Book Now</a>
             </div>
           </div>
@@ -11407,6 +11491,234 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 
 </section>
+<section class="spa-page" id="spa-page-heritage-spiritual-walk" hidden>
+
+
+<section class="daytour-hero" style="background-image:url('assets/user-photos/heritage-spiritual-walk-hero.jpg')">
+  <div class="daytour-hero__overlay"></div>
+  <div class="container daytour-hero__content">
+    <p class="daytour-hero__crumb">Home / Day Tours / Heritage & Spiritual Walk</p>
+    <p class="daytour-hero__eyebrow">Varanasi · Heritage & Spiritual Walk</p>
+    <h1 class="daytour-hero__title">Heritage & Spiritual Walk</h1>
+    <p class="daytour-hero__tagline">The mystic heart of Varanasi, on foot</p>
+    <div class="daytour-hero__stats">
+      <div class="daytour-hero__stat"><span class="daytour-hero__stat-label">Duration</span><span class="daytour-hero__stat-value">2.5 Hours</span></div>
+      <div class="daytour-hero__stat"><span class="daytour-hero__stat-label">Start</span><span class="daytour-hero__stat-value">Meeting point confirmed at booking</span></div>
+      
+    </div>
+  </div>
+</section>
+
+<div class="container daytour-snapshot-wrap">
+  <div class="daytour-snapshot reveal is-visible">
+    <div class="daytour-snapshot__facts">
+      <div class="daytour-snapshot__fact"><span class="daytour-snapshot__label">Duration</span><span class="daytour-snapshot__value">2.5 Hours</span></div>
+      <div class="daytour-snapshot__fact"><span class="daytour-snapshot__label">Group Size</span><span class="daytour-snapshot__value">12 people max</span></div>
+      
+    </div>
+    <div class="daytour-snapshot__price">
+      <div>
+        <span class="daytour-snapshot__price-value daytour-snapshot__price-value--muted">Price on request</span>
+      </div>
+      <a href="#enquire" class="btn btn--orange">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<section class="section daytour-intro">
+  <div class="container daytour-intro__grid">
+    <div class="daytour-intro__photo reveal is-visible">
+      <img src="assets/user-photos/heritage-spiritual-walk-intro.jpg" alt="Heritage & Spiritual Walk" />
+    </div>
+    <div class="reveal is-visible">
+      <p class="eyebrow">About This Experience</p>
+      <h2 class="daytour-intro__heading">Heritage & Spiritual Walk</h2>
+      <p class="daytour-intro__text">Decipher the mystic essence behind Varanasi’s history, culture and spirituality on a guided walk through time-honoured temples, puzzling alleys, vibrant bazaars, pilgrims, saffron-clad holy men and the occasional cow.</p><p class="daytour-intro__text">Stroll along the river ghats, the stepped banks that define the life and identity of the city, where chai sellers, boatmen, priests, yoga practitioners, wrestlers and sketch artists share the same riverfront. In the morning you may even run into a laughter club.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sage-soft daytour-features">
+  <div class="container">
+    <div class="daytour-features__head reveal is-visible">
+      <p class="eyebrow">Why It's Worth The Early Start</p>
+      <h2 class="section-heading">What Makes It Special</h2>
+    </div>
+    <div class="daytour-features__grid">
+      <div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2.5c1.2 1.6 1.2 3-.2 4.3M10 2.5c-1.2 1.6-1.2 3 .2 4.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M10 7v10M5 17h10M6.5 17l1-6h5l1 6" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">Kashi Vishwanath Corridor</h3><p class="daytour-feature-card__text">Walk the golden temple corridor, one of the city’s most important places of pilgrimage.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M3 17h14M4 17V8.5L10 4l6 4.5V17M7.5 17v-5h5v5" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">Iconic Landmarks & Temples</h3><p class="daytour-feature-card__text">A heritage walk that links the old city’s best-known landmarks and temples through its narrow alleys.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 18V9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M10 9C6 9 4 6.5 4 3c4 0 6 2.5 6 6Zm0 0c0-3.5 2-6 6-6 0 3.5-2 6-6 6Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">Life on the Ghats</h3><p class="daytour-feature-card__text">Follow the riverfront as pilgrims bathe, priests chant and the whole city goes about its morning.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M4 7.5h12l-1 9a1.5 1.5 0 0 1-1.5 1.3h-7A1.5 1.5 0 0 1 5 16.5l-1-9Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M7 7.5V6a3 3 0 0 1 6 0v1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span><h3 class="daytour-feature-card__title">Alleys & Bazaars</h3><p class="daytour-feature-card__text">Pass through lively bazaars and puzzling lanes where shopkeepers cater to pilgrims, visitors and locals.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M5 3v6a3 3 0 0 0 3 3v5M5 3v5M7 3v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M14 3c-1.4 0-2.4 1.6-2.4 4s1 4 2.4 4v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">A Chai Stop</h3><p class="daytour-feature-card__text">Pause for a cup of masala chai, the way Varanasi starts and ends its days.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section daytour-stops">
+  <div class="container">
+    <div class="daytour-stops__head reveal is-visible">
+      <p class="eyebrow">The Route</p>
+      <h2 class="section-heading">Stop by Stop</h2>
+    </div>
+    <ol class="daytour-stops__list">
+      <li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">1</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Meet Your Guide</h3><p class="daytour-stop__text">Meet your English-speaking local guide and set off on foot.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">2</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Temples & Old-City Alleys</h3><p class="daytour-stop__text">A heritage walk past the iconic landmarks and temples of the old city.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">3</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Kashi Vishwanath Corridor</h3><p class="daytour-stop__text">Walk through the golden temple corridor.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">4</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">The Ghats</h3><p class="daytour-stop__text">Stroll along the riverfront steps that define Varanasi’s identity.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">5</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Chai Stop</h3><p class="daytour-stop__text">A tea break along the way, with time to soak up the street life.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--cream daytour-lists">
+  <div class="container daytour-lists__grid">
+    <div class="reveal is-visible">
+      <h2 class="daytour-lists__heading">What's Included</h2>
+      <ul class="daytour-lists__list">
+        <li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Heritage walk highlighting iconic landmarks and temples</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Kashi Vishwanath (golden temple) corridor</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Walk along the ghats (riverfront)</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chai stop</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>English-speaking local tour guide</li>
+      </ul>
+    </div>
+    <div class="reveal is-visible">
+      <h2 class="daytour-lists__heading">A Few Things to Know</h2>
+      <ul class="daytour-lists__list">
+        <li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Duration is about 2.5 hours, entirely on foot</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Physical effort is low</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Groups are limited to 12 people</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Charge your phone and camera: there are plenty of photo opportunities</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Wear comfortable walking shoes and get a good night’s sleep beforehand</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="daytour-cta">
+  <div class="container daytour-cta__inner">
+    <div class="reveal is-visible">
+      <p class="eyebrow">Ready When You Are</p>
+      <h2 class="daytour-cta__title">Heritage & Spiritual Walk &mdash; Price on Request</h2>
+      <p class="daytour-cta__text">2.5 Hours · 12 people max</p>
+    </div>
+    <a href="#enquire" class="btn btn--orange daytour-cta__btn">Book Now</a>
+  </div>
+</section>
+
+<section class="section daytour-related">
+  <div class="container">
+    <div class="daytour-related__head reveal is-visible">
+      <h2 class="section-heading">More Day Tours</h2>
+    </div>
+    <div class="daytour-related__grid">
+      <article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/jaipur-walks-hero.jpg" alt="Pedals into the heart of pink city" /><span class="daytour-related-card__badge">3 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Pedals into the heart of pink city</p><a href="jaipur-walks.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/food.jpg" alt="Varanasi Food Tour" /><span class="daytour-related-card__badge">2.5 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Varanasi Food Tour</p><a href="food-walk-varanasi.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/varanasi-silk-walk-hero.jpg" alt="Varanasi Silk Walk" /><span class="daytour-related-card__badge">2 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Varanasi Silk Walk</p><a href="varanasi-silk-walk.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article>
+    </div>
+  </div>
+</section>
+
+
+</section>
+<section class="spa-page" id="spa-page-morning-street-walk" hidden>
+
+
+<section class="daytour-hero" style="background-image:url('assets/user-photos/morning-street-walk-hero.jpg')">
+  <div class="daytour-hero__overlay"></div>
+  <div class="container daytour-hero__content">
+    <p class="daytour-hero__crumb">Home / Day Tours / Morning Street Walk</p>
+    <p class="daytour-hero__eyebrow">Varanasi · Morning Street Walk</p>
+    <h1 class="daytour-hero__title">Morning Street Walk</h1>
+    <p class="daytour-hero__tagline">Varanasi at its most alive, before the day begins</p>
+    <div class="daytour-hero__stats">
+      <div class="daytour-hero__stat"><span class="daytour-hero__stat-label">Duration</span><span class="daytour-hero__stat-value">2 to 2.5 Hours</span></div>
+      <div class="daytour-hero__stat"><span class="daytour-hero__stat-label">Start</span><span class="daytour-hero__stat-value">Early morning, ending at Godaulia Crossing</span></div>
+      
+    </div>
+  </div>
+</section>
+
+<div class="container daytour-snapshot-wrap">
+  <div class="daytour-snapshot reveal is-visible">
+    <div class="daytour-snapshot__facts">
+      <div class="daytour-snapshot__fact"><span class="daytour-snapshot__label">Duration</span><span class="daytour-snapshot__value">2 to 2.5 Hours</span></div>
+      <div class="daytour-snapshot__fact"><span class="daytour-snapshot__label">Group Size</span><span class="daytour-snapshot__value">3 to 12 people</span></div>
+      
+    </div>
+    <div class="daytour-snapshot__price">
+      <div>
+        <span class="daytour-snapshot__price-value daytour-snapshot__price-value--muted">Price on request</span>
+      </div>
+      <a href="#enquire" class="btn btn--orange">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<section class="section daytour-intro">
+  <div class="container daytour-intro__grid">
+    <div class="daytour-intro__photo reveal is-visible">
+      <img src="assets/user-photos/morning-street-walk-intro.jpg" alt="Morning Street Walk" />
+    </div>
+    <div class="reveal is-visible">
+      <p class="eyebrow">About This Experience</p>
+      <h2 class="daytour-intro__heading">Morning Street Walk</h2>
+      <p class="daytour-intro__text">Whatever name you call it, Kashi, Banaras or Varanasi, one thing never changes: you should not miss the city’s morning. This walk turns away from the monuments and follows what is happening in the streets, and the philosophy and culture behind it.</p><p class="daytour-intro__text">Watch pilgrims prepare to bathe in the Ganges and locals in their traditional morning dress heading for a masala chai. After the chai comes a stop at a pan shop. It suits solo travellers, photographers, writers and anyone ready to step out of their comfort zone.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sage-soft daytour-features">
+  <div class="container">
+    <div class="daytour-features__head reveal is-visible">
+      <p class="eyebrow">Why It's Worth The Early Start</p>
+      <h2 class="section-heading">What Makes It Special</h2>
+    </div>
+    <div class="daytour-features__grid">
+      <div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 18V9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M10 9C6 9 4 6.5 4 3c4 0 6 2.5 6 6Zm0 0c0-3.5 2-6 6-6 0 3.5-2 6-6 6Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">Morning Bathing & Chanting</h3><p class="daytour-feature-card__text">See pilgrims bathe in the Ganges and hear the morning chanting as the city wakes.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M5 3v6a3 3 0 0 0 3 3v5M5 3v5M7 3v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M14 3c-1.4 0-2.4 1.6-2.4 4s1 4 2.4 4v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">Street Chai & Breakfast</h3><p class="daytour-feature-card__text">Join the street chai and breakfast junctions where locals gather, and try a masala chai followed by a pan.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2.5c1.2 1.6 1.2 3-.2 4.3M10 2.5c-1.2 1.6-1.2 3 .2 4.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M10 7v10M5 17h10M6.5 17l1-6h5l1 6" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">Ashrams</h3><p class="daytour-feature-card__text">Pass the ashrams that line the old city and see their daily rhythm up close.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M3 17h14M4 17V8.5L10 4l6 4.5V17M7.5 17v-5h5v5" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">Old Heritage Buildings</h3><p class="daytour-feature-card__text">Walk past old heritage buildings and shopkeepers getting ready for pilgrims, visitors and locals.</p></div><div class="daytour-feature-card reveal is-visible"><span class="daytour-feature-card__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2.5l2.1 4.6 5 .6-3.7 3.4.95 5-4.35-2.5-4.35 2.5.95-5-3.7-3.4 5-.6L10 2.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><h3 class="daytour-feature-card__title">All Five Senses</h3><p class="daytour-feature-card__text">Touch, sight, hearing, smell and taste all get a workout on this street-level walk, with plenty of chances for photographs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section daytour-stops">
+  <div class="container">
+    <div class="daytour-stops__head reveal is-visible">
+      <p class="eyebrow">The Route</p>
+      <h2 class="section-heading">Stop by Stop</h2>
+    </div>
+    <ol class="daytour-stops__list">
+      <li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">1</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Meet Your Walking Guide</h3><p class="daytour-stop__text">Your English or Hindi speaking guide meets the group and sets off through the morning streets.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">2</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Street Life & Ashrams</h3><p class="daytour-stop__text">Watch pilgrims, ashrams and the first shops of the day as the old city comes to life.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">3</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Morning Bathing & Chanting</h3><p class="daytour-stop__text">Pause at the riverfront to see the morning bathing and chanting.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">4</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Masala Chai & a Snack</h3><p class="daytour-stop__text">Stop at a street chai junction for masala chai and aalu kachori or another seasonal snack.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">5</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Pan Shop</h3><p class="daytour-stop__text">The next stop after chai is the pan shop.</p></div></li><li class="daytour-stop reveal is-visible"><span class="daytour-stop__number">6</span><div class="daytour-stop__body"><h3 class="daytour-stop__title">Drop-off at Godaulia Crossing</h3><p class="daytour-stop__text">The walk ends at Godaulia Crossing, with one-way transport included.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--cream daytour-lists">
+  <div class="container daytour-lists__grid">
+    <div class="reveal is-visible">
+      <h2 class="daytour-lists__heading">What's Included</h2>
+      <ul class="daytour-lists__list">
+        <li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>English or Hindi speaking walking guide</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>One-way transport</li><li><span class="daytour-lists__icon daytour-lists__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chai and aalu kachori or another seasonal snack</li>
+      </ul>
+    </div>
+    <div class="reveal is-visible">
+      <h2 class="daytour-lists__heading">A Few Things to Know</h2>
+      <ul class="daytour-lists__list">
+        <li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Takes about 2 to 2.5 hours, entirely on foot</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Group size is 3 to 12 people, offered on a join-in basis</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Items of a personal nature and gratuities are not included</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Please contact the local supplier 24 hours before departure to confirm your trip</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Charge your phone and camera, and get a good night’s sleep beforehand</li><li><span class="daytour-lists__icon daytour-lists__icon--info"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M10 9v5M10 6.5v.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>Guided in Hindi or English</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="daytour-cta">
+  <div class="container daytour-cta__inner">
+    <div class="reveal is-visible">
+      <p class="eyebrow">Ready When You Are</p>
+      <h2 class="daytour-cta__title">Morning Street Walk &mdash; Price on Request</h2>
+      <p class="daytour-cta__text">2 to 2.5 Hours · 3 to 12 people</p>
+    </div>
+    <a href="#enquire" class="btn btn--orange daytour-cta__btn">Book Now</a>
+  </div>
+</section>
+
+<section class="section daytour-related">
+  <div class="container">
+    <div class="daytour-related__head reveal is-visible">
+      <h2 class="section-heading">More Day Tours</h2>
+    </div>
+    <div class="daytour-related__grid">
+      <article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/jaipur-walks-hero.jpg" alt="Pedals into the heart of pink city" /><span class="daytour-related-card__badge">3 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Pedals into the heart of pink city</p><a href="jaipur-walks.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/food.jpg" alt="Varanasi Food Tour" /><span class="daytour-related-card__badge">2.5 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Varanasi Food Tour</p><a href="food-walk-varanasi.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/varanasi-silk-walk-hero.jpg" alt="Varanasi Silk Walk" /><span class="daytour-related-card__badge">2 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Varanasi Silk Walk</p><a href="varanasi-silk-walk.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article>
+    </div>
+  </div>
+</section>
+
+
+</section>
 <section class="spa-page" id="spa-page-sailing-camping-varanasi" hidden>
 
 
@@ -11653,7 +11965,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 <script>
 (function () {
-  var ROUTES = {"index.html": "home", "./": "home", "": "home", "homepage.html": "home", "destinations.html": "destinations", "day-tours.html": "day-tours", "kerala-tour.html": "kerala-tour", "indias-golden-triangle.html": "indias-golden-triangle", "best-of-north-india.html": "best-of-north-india", "varanasiveritabletour.html": "varanasiveritabletour", "lucknow-to-bodhgaya.html": "lucknow-to-bodhgaya", "spiti-valley-adventure.html": "spiti-valley-adventure", "a-bit-of-north-and-south.html": "a-bit-of-north-and-south", "southern-splendors.html": "southern-splendors", "by-road-through-high-passes.html": "by-road-through-high-passes", "golden-triangle-rustic-rajasthan.html": "golden-triangle-rustic-rajasthan", "the-temple-run.html": "the-temple-run", "heavenly-himalayas.html": "heavenly-himalayas", "heritage-streets.html": "heritage-streets", "golden-triangle-roaring-ranthambhore.html": "golden-triangle-roaring-ranthambhore", "jaipur-walks.html": "jaipur-walks", "food-walk-varanasi.html": "food-walk-varanasi", "varanasi-silk-walk.html": "varanasi-silk-walk", "subah-e-banaras.html": "subah-e-banaras", "sarnath-walk.html": "sarnath-walk", "blue-city-walk.html": "blue-city-walk", "sailing-camping-varanasi.html": "sailing-camping-varanasi", "blog.html": "blog"};
+  var ROUTES = {"index.html": "home", "./": "home", "": "home", "homepage.html": "home", "destinations.html": "destinations", "day-tours.html": "day-tours", "kerala-tour.html": "kerala-tour", "indias-golden-triangle.html": "indias-golden-triangle", "best-of-north-india.html": "best-of-north-india", "varanasiveritabletour.html": "varanasiveritabletour", "lucknow-to-bodhgaya.html": "lucknow-to-bodhgaya", "spiti-valley-adventure.html": "spiti-valley-adventure", "a-bit-of-north-and-south.html": "a-bit-of-north-and-south", "southern-splendors.html": "southern-splendors", "by-road-through-high-passes.html": "by-road-through-high-passes", "golden-triangle-rustic-rajasthan.html": "golden-triangle-rustic-rajasthan", "the-temple-run.html": "the-temple-run", "heavenly-himalayas.html": "heavenly-himalayas", "heritage-streets.html": "heritage-streets", "golden-triangle-roaring-ranthambhore.html": "golden-triangle-roaring-ranthambhore", "jaipur-walks.html": "jaipur-walks", "food-walk-varanasi.html": "food-walk-varanasi", "varanasi-silk-walk.html": "varanasi-silk-walk", "subah-e-banaras.html": "subah-e-banaras", "sarnath-walk.html": "sarnath-walk", "blue-city-walk.html": "blue-city-walk", "heritage-spiritual-walk.html": "heritage-spiritual-walk", "morning-street-walk.html": "morning-street-walk", "sailing-camping-varanasi.html": "sailing-camping-varanasi", "blog.html": "blog"};
   var VALID = {};
   Object.keys(ROUTES).forEach(function (k) { VALID[ROUTES[k]] = true; });
 
@@ -13534,6 +13846,60 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 <script>
 (function(){
   var root = document.getElementById('spa-page-blue-city-walk');
+  if (!root) return;
+
+(function () {
+
+  // Enquiry form — routes every submission to info@tournivaljourneys.com
+  // via the visitor's own mail client, so all enquiries land in one inbox.
+  root.querySelectorAll('form.footer__form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = form.elements['name'] ? form.elements['name'].value : '';
+      var email = form.elements['email'] ? form.elements['email'].value : '';
+      var message = form.elements['message'] ? form.elements['message'].value : '';
+      var subject = 'New enquiry from ' + name;
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      window.location.href = 'mailto:info@tournivaljourneys.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var btn = form.querySelector('button');
+      if (btn) btn.textContent = 'Thank you!';
+    });
+  });
+})();
+
+})();
+
+</script>
+<script>
+(function(){
+  var root = document.getElementById('spa-page-heritage-spiritual-walk');
+  if (!root) return;
+
+(function () {
+
+  // Enquiry form — routes every submission to info@tournivaljourneys.com
+  // via the visitor's own mail client, so all enquiries land in one inbox.
+  root.querySelectorAll('form.footer__form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = form.elements['name'] ? form.elements['name'].value : '';
+      var email = form.elements['email'] ? form.elements['email'].value : '';
+      var message = form.elements['message'] ? form.elements['message'].value : '';
+      var subject = 'New enquiry from ' + name;
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      window.location.href = 'mailto:info@tournivaljourneys.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var btn = form.querySelector('button');
+      if (btn) btn.textContent = 'Thank you!';
+    });
+  });
+})();
+
+})();
+
+</script>
+<script>
+(function(){
+  var root = document.getElementById('spa-page-morning-street-walk');
   if (!root) return;
 
 (function () {
