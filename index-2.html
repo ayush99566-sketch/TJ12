@@ -12115,7 +12115,14 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   });
 
   // Initial route
-  var initial = (location.hash || '#home').slice(1);
+  var initial = (location.hash || '').slice(1);
+  if (!VALID[initial]) {
+    // Clean or .html URLs (e.g. /kerala-tour or /kerala-tour.html) open that page.
+    var seg = (location.pathname || '').split('/').pop().toLowerCase();
+    if (seg && !/\.html$/.test(seg)) seg += '.html';
+    if (ROUTES[seg]) initial = ROUTES[seg];
+  }
+  if (!initial) initial = 'home';
   var initialId = VALID[initial] ? initial : 'home';
   navStack = [initialId];
   navIndex = 0;
