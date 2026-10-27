@@ -1,115 +1,11 @@
 {
   "rewrites": [
     {
-      "source": "/a-bit-of-north-and-south.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/best-of-north-india.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/blog.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/blue-city-walk.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/by-road-through-high-passes.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/day-sailing-varanasi.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/day-tours.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/destinations.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/food-walk-varanasi.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/golden-triangle-roaring-ranthambhore.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/golden-triangle-rustic-rajasthan.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/heavenly-himalayas.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/heritage-spiritual-walk.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/heritage-streets.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/indias-golden-triangle.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/jaipur-walks.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/kerala-tour.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/lucknow-to-bodhgaya.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/morning-street-walk.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/sailing-overnight-camping-varanasi.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/sarnath-walk.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/southern-splendors.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/spiti-valley-adventure.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/subah-e-banaras.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/the-temple-run.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/varanasi-silk-walk.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/varanasiveritabletour.html",
-      "destination": "/index.html"
-    },
-    {
       "source": "/a-bit-of-north-and-south",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/a-bit-of-north-and-south.html",
       "destination": "/index.html"
     },
     {
@@ -117,7 +13,15 @@
       "destination": "/index.html"
     },
     {
+      "source": "/best-of-north-india.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/blog",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog.html",
       "destination": "/index.html"
     },
     {
@@ -125,7 +29,23 @@
       "destination": "/index.html"
     },
     {
+      "source": "/blue-city-walk.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/by-road-through-high-passes",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/by-road-through-high-passes.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/colonial-delhi-cycling-tour.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contemporary-delhi-art-tour.html",
       "destination": "/index.html"
     },
     {
@@ -133,7 +53,23 @@
       "destination": "/index.html"
     },
     {
+      "source": "/day-sailing-varanasi.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/day-tours",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/day-tours.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/delhi-at-sunrise-tour.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/delhi-gardens-and-ruins-tour.html",
       "destination": "/index.html"
     },
     {
@@ -141,7 +77,19 @@
       "destination": "/index.html"
     },
     {
+      "source": "/destinations.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/food-walk-varanasi",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/food-walk-varanasi.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/gandhi-delhi-akshardham-tour.html",
       "destination": "/index.html"
     },
     {
@@ -149,7 +97,15 @@
       "destination": "/index.html"
     },
     {
+      "source": "/golden-triangle-roaring-ranthambhore.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/golden-triangle-rustic-rajasthan",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/golden-triangle-rustic-rajasthan.html",
       "destination": "/index.html"
     },
     {
@@ -157,7 +113,15 @@
       "destination": "/index.html"
     },
     {
+      "source": "/heavenly-himalayas.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/heritage-spiritual-walk",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/heritage-spiritual-walk.html",
       "destination": "/index.html"
     },
     {
@@ -165,7 +129,23 @@
       "destination": "/index.html"
     },
     {
+      "source": "/heritage-streets.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/iconic-delhi-tour.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/indias-golden-triangle",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/indias-golden-triangle.html",
       "destination": "/index.html"
     },
     {
@@ -173,7 +153,15 @@
       "destination": "/index.html"
     },
     {
+      "source": "/jaipur-walks.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/kerala-tour",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/kerala-tour.html",
       "destination": "/index.html"
     },
     {
@@ -181,39 +169,31 @@
       "destination": "/index.html"
     },
     {
+      "source": "/lucknow-to-bodhgaya.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/mehrauli-lost-capital-tour.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/morning-street-walk",
       "destination": "/index.html"
     },
     {
-      "source": "/sailing-overnight-camping-varanasi",
+      "source": "/morning-street-walk.html",
       "destination": "/index.html"
     },
     {
-      "source": "/sarnath-walk",
+      "source": "/old-delhi-food-walk.html",
       "destination": "/index.html"
     },
     {
-      "source": "/southern-splendors",
+      "source": "/old-delhi-walk.html",
       "destination": "/index.html"
     },
     {
-      "source": "/spiti-valley-adventure",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/subah-e-banaras",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/the-temple-run",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/varanasi-silk-walk",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/varanasiveritabletour",
+      "source": "/qutub-cycling-tour-delhi.html",
       "destination": "/index.html"
     },
     {
@@ -225,7 +205,67 @@
       "destination": "/index.html"
     },
     {
-      "source": "/index.html",
+      "source": "/sailing-overnight-camping-varanasi",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sailing-overnight-camping-varanasi.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sarnath-walk",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sarnath-walk.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/southern-splendors",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/southern-splendors.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/spiti-valley-adventure",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/spiti-valley-adventure.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/subah-e-banaras",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/subah-e-banaras.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/the-temple-run",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/the-temple-run.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/varanasi-silk-walk",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/varanasi-silk-walk.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/varanasiveritabletour",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/varanasiveritabletour.html",
       "destination": "/index.html"
     }
   ]
