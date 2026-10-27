@@ -21,6 +21,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/day-sailing-varanasi.html",
+      "destination": "/index.html"
+    },
+    {
       "source": "/day-tours.html",
       "destination": "/index.html"
     },
@@ -73,7 +77,7 @@
       "destination": "/index.html"
     },
     {
-      "source": "/sailing-camping-varanasi.html",
+      "source": "/sailing-overnight-camping-varanasi.html",
       "destination": "/index.html"
     },
     {
@@ -122,6 +126,10 @@
     },
     {
       "source": "/by-road-through-high-passes",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/day-sailing-varanasi",
       "destination": "/index.html"
     },
     {
@@ -177,7 +185,7 @@
       "destination": "/index.html"
     },
     {
-      "source": "/sailing-camping-varanasi",
+      "source": "/sailing-overnight-camping-varanasi",
       "destination": "/index.html"
     },
     {
@@ -206,6 +214,14 @@
     },
     {
       "source": "/varanasiveritabletour",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sailing-camping-varanasi",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sailing-camping-varanasi.html",
       "destination": "/index.html"
     },
     {

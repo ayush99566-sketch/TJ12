@@ -22,7 +22,7 @@
   --color-ink: #1a1a1a;
   --color-gray-light: #f0f0f0;
   --color-gray-border: #dfe6e9;
-  --color-gray-text: #5b615c;
+  --color-gray-text: #3c423d;
 
   /* Typography */
   --font-display: 'Wix Madefor Display', sans-serif; /* brand wordmark / big soft headings */
@@ -4095,6 +4095,13 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 .destinations-page__filter { cursor: pointer; }
 [data-tour-card][hidden] { display: none !important; }
 </style>
+<style id="tj-readability-vibrance">
+/* Corrections: slightly bolder, darker body text; a touch more colour and brightness in photos */
+body { font-weight: 500; }
+.spa-page p, .spa-page li, .spa-page td { font-weight: 500; }
+.spa-page img { filter: saturate(1.18) brightness(1.06) contrast(1.03); }
+.spa-page .itinerary-item__body p, .spa-page .tour-overview__text, .spa-page .daytour-intro__text, .spa-page .daytour-stop__text, .spa-page .daytour-feature-card__text { font-weight: 500; color: #333a35; }
+</style>
 </head>
 <body>
 <header class="header" id="top">
@@ -4189,9 +4196,9 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   </div>
 </section>
 
-<section class="section section--sage-soft journeys" id="home-tours"><div class="container"><div class="journeys__head reveal"><p class="eyebrow">Multi-day Journeys</p><h2 class="section-heading journeys__title">Find Your Journey</h2><p class="journeys__sub">Handcrafted itineraries, grouped by the India you want to feel. Pick a region to begin.</p></div><div class="journeys__tabs reveal" role="tablist" aria-label="Choose a region"><button type="button" class="journeys__tab is-active" role="tab" aria-selected="true" tabindex="0" data-region-tab="heritage">Rajasthan &amp; Heritage</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="himalaya">Himalaya &amp; Ladakh</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="south">South India</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="spiritual">Spiritual India</button></div><div class="journeys__panels reveal"><div class="journeys__panel is-active" role="tabpanel" data-region-panel="heritage"><p class="journeys__blurb">Palaces, forts and the classic Golden Triangle, with tigers and painted havelis on the side.</p><div class="journeys__layout"><a class="journey-lead" href="indias-golden-triangle.html"><img src="assets/user-photos/indias-golden-triangle-hero1.jpg" alt="India&#x27;s Golden Triangle" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">7N8D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Rajasthan &amp; Heritage</span><span class="journey-lead__title">India&#x27;s Golden Triangle</span><span class="journey-lead__tagline">Delhi · Agra · Jaipur · Varanasi</span><span class="journey-lead__meta"><span>8 Days / 7 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="golden-triangle-rustic-rajasthan.html"><span class="journey-row__thumb"><img src="assets/user-photos/golden-triangle-rustic-rajasthan-hero1.jpg" alt="Golden Triangle &amp; Rustic Rajasthan" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Golden Triangle &amp; Rustic Rajasthan</span><span class="journey-row__tagline">Great Monuments, Village Lanes and Painted Havelis</span><span class="journey-row__meta">10 Days / 9 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="golden-triangle-roaring-ranthambhore.html"><span class="journey-row__thumb"><img src="assets/user-photos/golden-triangle-roaring-ranthambhore-hero1.jpg" alt="Golden Triangle &amp; Roaring Ranthambhore" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Golden Triangle &amp; Roaring Ranthambhore</span><span class="journey-row__tagline">Monuments, a Hill Fort and Tigers in the Wild</span><span class="journey-row__meta">9 Days / 8 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="heritage-streets.html"><span class="journey-row__thumb"><img src="assets/user-photos/heritage-streets-hero1.jpg" alt="Heritage Streets" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Heritage Streets</span><span class="journey-row__tagline">Forts, Palaces and Lakes of Royal Rajasthan</span><span class="journey-row__meta">11 Days / 10 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="heritage">See all Rajasthan &amp; Heritage journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="himalaya" hidden><p class="journeys__blurb">High passes, turquoise lakes and monasteries perched above the clouds.</p><div class="journeys__layout"><a class="journey-lead" href="heavenly-himalayas.html"><img src="assets/user-photos/heavenly-himalayas-hero1.jpg" alt="Heavenly Himalayas" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">8N9D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Himalaya &amp; Ladakh</span><span class="journey-lead__title">Heavenly Himalayas</span><span class="journey-lead__tagline">Ladakh&#x27;s Monasteries, Dunes and High-Altitude Lakes</span><span class="journey-lead__meta"><span>9 Days / 8 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="spiti-valley-adventure.html"><span class="journey-row__thumb"><img src="assets/user-photos/spiti-valley-adventure-hero1.jpg" alt="Spiti Valley Adventure" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Spiti Valley Adventure</span><span class="journey-row__tagline">Across the Cold Desert of the Himalayas</span><span class="journey-row__meta">14 Days / 13 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="by-road-through-high-passes.html"><span class="journey-row__thumb"><img src="assets/user-photos/by-road-through-high-passes-hero1.jpg" alt="By Road Through High Passes" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">By Road Through High Passes</span><span class="journey-row__tagline">Delhi to Ladakh, the Slow and Scenic Way</span><span class="journey-row__meta">13 Days / 12 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="himalaya">See all Himalaya &amp; Ladakh journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="south" hidden><p class="journeys__blurb">Chola temples, tea hills and quiet Kerala backwaters.</p><div class="journeys__layout"><a class="journey-lead" href="southern-splendors.html"><img src="assets/user-photos/southern-splendors-hero1.jpg" alt="Southern Splendors" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">17N18D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; South India</span><span class="journey-lead__title">Southern Splendors</span><span class="journey-lead__tagline">Temple Towns of Tamil Nadu to the Backwaters of Kerala</span><span class="journey-lead__meta"><span>18 Days / 17 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="kerala-tour.html"><span class="journey-row__thumb"><img src="assets/user-photos/kerala-tour-hero1.jpg" alt="Kerala Tour" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Kerala Tour</span><span class="journey-row__tagline">God&#x27;s Own Country</span><span class="journey-row__meta">10 Days / 9 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="the-temple-run.html"><span class="journey-row__thumb"><img src="assets/user-photos/the-temple-run-hero1.jpg" alt="The Temple Run" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">The Temple Run</span><span class="journey-row__tagline">Shore Temples, Chola Giants &amp; the Heart of Tamil Nadu</span><span class="journey-row__meta">7 Days / 6 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="a-bit-of-north-and-south.html"><span class="journey-row__thumb"><img src="assets/user-photos/a-bit-of-north-and-south-hero1.jpg" alt="A Bit of North &amp; A Bit of South" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">A Bit of North &amp; A Bit of South</span><span class="journey-row__tagline">Forts and Tigers to Tea Hills and Backwaters</span><span class="journey-row__meta">17 Days / 16 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="south">See all South India journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="spiritual" hidden><p class="journeys__blurb">Dawn on the ghats of Varanasi and the Buddhist trail to Bodhgaya.</p><div class="journeys__layout"><a class="journey-lead" href="best-of-north-india.html"><img src="assets/user-photos/best-of-north-india-hero1.jpg" alt="Best of North India" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">12N13D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Spiritual India</span><span class="journey-lead__title">Best of North India</span><span class="journey-lead__tagline">Delhi to Varanasi, the Long Way</span><span class="journey-lead__meta"><span>13 Days / 12 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="varanasiveritabletour.html"><span class="journey-row__thumb"><img src="assets/user-photos/varanasiveritabletour-hero1.jpg" alt="Varanasi Veritable Tour" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Varanasi Veritable Tour</span><span class="journey-row__tagline">Ghats, Temples &amp; Old-City Lanes</span><span class="journey-row__meta">4 Days / 3 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="lucknow-to-bodhgaya.html"><span class="journey-row__thumb"><img src="assets/user-photos/lucknow-to-bodhgaya-hero1.jpg" alt="Lucknow to Bodhgaya" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Lucknow to Bodhgaya</span><span class="journey-row__tagline">Nawabi Heritage to Buddhist Pilgrimage</span><span class="journey-row__meta">8 Days / 7 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="spiritual">See all Spiritual India journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><div class="journeys__viewall reveal"><a href="destinations.html" class="btn btn--sage" data-region-link="all">View all journeys</a></div></div></section>
+<section class="section section--sage-soft journeys" id="home-tours"><div class="container"><div class="journeys__head reveal"><p class="eyebrow">Multi-day Journeys</p><h2 class="section-heading journeys__title">Find Your Journey</h2><p class="journeys__sub">Handcrafted itineraries, grouped by the India you want to feel. Pick a region to begin.</p></div><div class="journeys__tabs reveal" role="tablist" aria-label="Choose a region"><button type="button" class="journeys__tab is-active" role="tab" aria-selected="true" tabindex="0" data-region-tab="heritage">Rajasthan &amp; Heritage</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="himalaya">Himalaya &amp; Ladakh</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="south">South India</button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-region-tab="spiritual">Spiritual India</button></div><div class="journeys__panels reveal"><div class="journeys__panel is-active" role="tabpanel" data-region-panel="heritage"><p class="journeys__blurb">Palaces, forts and the classic Golden Triangle, with tigers and painted havelis on the side.</p><div class="journeys__layout"><a class="journey-lead" href="indias-golden-triangle.html"><img src="assets/user-photos/indias-golden-triangle-hero1.jpg" alt="India&#x27;s Golden Triangle" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">7N8D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Rajasthan &amp; Heritage</span><span class="journey-lead__title">India&#x27;s Golden Triangle</span><span class="journey-lead__tagline">Delhi · Agra · Jaipur · Varanasi</span><span class="journey-lead__meta"><span>8 Days / 7 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="golden-triangle-rustic-rajasthan.html"><span class="journey-row__thumb"><img src="assets/user-photos/golden-triangle-rustic-rajasthan-hero1.jpg" alt="Golden Triangle &amp; Rustic Rajasthan" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Golden Triangle &amp; Rustic Rajasthan</span><span class="journey-row__tagline">Great Monuments, Village Lanes and Painted Havelis</span><span class="journey-row__meta">10 Days / 9 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="golden-triangle-roaring-ranthambhore.html"><span class="journey-row__thumb"><img src="assets/user-photos/golden-triangle-roaring-ranthambhore-hero1.jpg" alt="Golden Triangle &amp; Roaring Ranthambhore" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Golden Triangle &amp; Roaring Ranthambhore</span><span class="journey-row__tagline">Monuments, a Hill Fort and Tigers in the Wild</span><span class="journey-row__meta">9 Days / 8 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="heritage-streets.html"><span class="journey-row__thumb"><img src="assets/user-photos/heritage-streets-hero1.jpg" alt="Heritage Streets" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Heritage Streets</span><span class="journey-row__tagline">Forts, Palaces and Lakes of Royal Rajasthan</span><span class="journey-row__meta">11 Days / 10 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="heritage">See all Rajasthan &amp; Heritage journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="himalaya" hidden><p class="journeys__blurb">High passes, turquoise lakes and monasteries perched above the clouds.</p><div class="journeys__layout"><a class="journey-lead" href="heavenly-himalayas.html"><img src="assets/user-photos/heavenly-himalayas-hero1.jpg" alt="Heavenly Himalayas" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">8N9D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Himalaya &amp; Ladakh</span><span class="journey-lead__title">Heavenly Himalayas</span><span class="journey-lead__tagline">Ladakh&#x27;s Monasteries, Dunes and High-Altitude Lakes</span><span class="journey-lead__meta"><span>9 Days / 8 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="spiti-valley-adventure.html"><span class="journey-row__thumb"><img src="assets/user-photos/spiti-valley-adventure-hero1.jpg" alt="Spiti Valley Adventure" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Spiti Valley Adventure</span><span class="journey-row__tagline">Across the Cold Desert of the Himalayas</span><span class="journey-row__meta">14 Days / 13 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="by-road-through-high-passes.html"><span class="journey-row__thumb"><img src="assets/user-photos/by-road-through-high-passes-hero1.jpg" alt="By Road Through High Passes" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">By Road Through High Passes</span><span class="journey-row__tagline">Delhi to Ladakh, the Slow and Scenic Way</span><span class="journey-row__meta">13 Days / 12 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="himalaya">See all Himalaya &amp; Ladakh journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="south" hidden><p class="journeys__blurb">Chola temples, tea hills and quiet Kerala backwaters.</p><div class="journeys__layout"><a class="journey-lead" href="southern-splendors.html"><img src="assets/user-photos/southern-splendors-hero1.jpg" alt="Southern Splendors" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">17N18D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; South India</span><span class="journey-lead__title">Southern Splendors</span><span class="journey-lead__tagline">Temple Towns of Tamil Nadu to the Backwaters of Kerala</span><span class="journey-lead__meta"><span>18 Days / 17 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="kerala-tour.html"><span class="journey-row__thumb"><img src="assets/user-photos/kerala-tour-hero1.jpg" alt="Kerala Tour" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Kerala Tour</span><span class="journey-row__tagline">God&#x27;s Own Country</span><span class="journey-row__meta">10 Days / 9 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="the-temple-run.html"><span class="journey-row__thumb"><img src="assets/user-photos/the-temple-run-hero1.jpg" alt="The Temple Run" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">The Temple Run</span><span class="journey-row__tagline">Shore Temples, Chola Giants &amp; the Heart of Tamil Nadu</span><span class="journey-row__meta">7 Days / 6 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="a-bit-of-north-and-south.html"><span class="journey-row__thumb"><img src="assets/user-photos/a-bit-of-north-and-south-hero1.jpg" alt="A Bit of North &amp; A Bit of South" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">A Bit of North &amp; A Bit of South</span><span class="journey-row__tagline">Forts and Tigers to Tea Hills and Backwaters</span><span class="journey-row__meta">17 Days / 16 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="south">See all South India journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-region-panel="spiritual" hidden><p class="journeys__blurb">Dawn on the ghats of Varanasi and the Buddhist trail to Bodhgaya.</p><div class="journeys__layout"><a class="journey-lead" href="best-of-north-india.html"><img src="assets/user-photos/best-of-north-india-hero1.jpg" alt="Best of North India" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">12N13D</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Spiritual India</span><span class="journey-lead__title">Best of North India</span><span class="journey-lead__tagline">Delhi to Varanasi, the Long Way</span><span class="journey-lead__meta"><span>13 Days / 12 Nights</span><span class="journey-lead__cta">Explore this journey <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row" href="varanasiveritabletour.html"><span class="journey-row__thumb"><img src="assets/user-photos/varanasiveritabletour-hero1.jpg" alt="Varanasi Veritable Tour" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Varanasi Veritable Tour</span><span class="journey-row__tagline">Ghats, Temples &amp; Old-City Lanes</span><span class="journey-row__meta">4 Days / 3 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="sailing-overnight-camping-varanasi.html"><span class="journey-row__thumb"><img src="assets/user-photos/sailing-camping-varanasi-sunrise.jpg" alt="Sailing &amp; Overnight Camping on the Ganges" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Sailing &amp; Overnight Camping on the Ganges</span><span class="journey-row__tagline">Slowly Down the Ganges</span><span class="journey-row__meta">2 Days / 1 Night</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row" href="lucknow-to-bodhgaya.html"><span class="journey-row__thumb"><img src="assets/user-photos/lucknow-to-bodhgaya-hero1.jpg" alt="Lucknow to Bodhgaya" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Lucknow to Bodhgaya</span><span class="journey-row__tagline">Nawabi Heritage to Buddhist Pilgrimage</span><span class="journey-row__meta">8 Days / 7 Nights</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="destinations.html" class="journeys__regionlink" data-region-link="spiritual">See all Spiritual India journeys <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><div class="journeys__viewall reveal"><a href="destinations.html" class="btn btn--sage" data-region-link="all">View all journeys</a></div></div></section>
 
-<section class="section daycities" id="home-day-tours"><div class="container"><div class="journeys__head reveal"><p class="eyebrow">Day Tours</p><h2 class="section-heading journeys__title">Choose Your Path</h2><p class="journeys__sub">A few unhurried hours with a local guide. Pick a city to see what is on.</p></div><div class="journeys__tabs reveal" role="tablist" aria-label="Choose a city"><button type="button" class="journeys__tab is-active" role="tab" aria-selected="true" tabindex="0" data-city-tab="varanasi">Varanasi <span class="journeys__count">7</span></button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-city-tab="jaipur">Jaipur <span class="journeys__count">1</span></button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-city-tab="jodhpur">Jodhpur <span class="journeys__count">1</span></button></div><div class="journeys__panels reveal"><div class="journeys__panel is-active" role="tabpanel" data-city-panel="varanasi"><p class="journeys__blurb">Sunrise on the ghats, silk looms, street food and the Buddha’s first sermon, all in India’s spiritual capital.</p><div class="journeys__layout"><a class="journey-lead" href="subah-e-banaras.html"><img src="assets/user-photos/subah-e-banaras-hero.jpg" alt="Subah E Banaras" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">4 Hours</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Varanasi</span><span class="journey-lead__title">Subah E Banaras</span><span class="journey-lead__tagline">Morning of the Eternal City</span><span class="journey-lead__meta"><span>4 Hours</span><span class="journey-lead__cta">Explore this day tour <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row journey-row--day" href="heritage-spiritual-walk.html"><span class="journey-row__thumb"><img src="assets/user-photos/heritage-spiritual-walk-hero.jpg" alt="Heritage &amp; Spiritual Walk" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Heritage &amp; Spiritual Walk</span><span class="journey-row__tagline">The mystic heart of Varanasi, on foot</span><span class="journey-row__meta">2.5 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="morning-street-walk.html"><span class="journey-row__thumb"><img src="assets/user-photos/morning-street-walk-hero.jpg" alt="Morning Street Walk" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Morning Street Walk</span><span class="journey-row__tagline">Varanasi at its most alive, before the day begins</span><span class="journey-row__meta">2 to 2.5 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="sarnath-walk.html"><span class="journey-row__thumb"><img src="assets/user-photos/sarnath-walk-hero.jpg" alt="Sarnath Excursions" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Sarnath Excursions</span><span class="journey-row__tagline">Where the Buddha First Spoke</span><span class="journey-row__meta">3 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="food-walk-varanasi.html"><span class="journey-row__thumb"><img src="assets/food.jpg" alt="Varanasi Food Tour" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Varanasi Food Tour</span><span class="journey-row__tagline">Taste the Soul of Kashi</span><span class="journey-row__meta">2.5 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="varanasi-silk-walk.html"><span class="journey-row__thumb"><img src="assets/user-photos/varanasi-silk-walk-hero.jpg" alt="Varanasi Silk Walk" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Varanasi Silk Walk</span><span class="journey-row__tagline">Where Gold Meets Thread</span><span class="journey-row__meta">2 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="sailing-camping-varanasi.html"><span class="journey-row__thumb"><img src="assets/user-photos/sailing-camping-varanasi-sunrise.jpg" alt="Sailing &amp; Camping on the Ganges" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Sailing &amp; Camping on the Ganges</span><span class="journey-row__tagline">Varanasi to Chunar and back, adrift on a wooden country boat</span><span class="journey-row__meta">Full Day (8–10 Hours)</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="day-tours.html" class="journeys__regionlink" data-city-link="varanasi">See all 7 Varanasi day tours <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-city-panel="jaipur" hidden><p class="journeys__blurb">The Pink City, seen from a bicycle before the traffic wakes up.</p><div class="journeys__layout journeys__layout--solo"><a class="journey-lead" href="jaipur-walks.html"><img src="assets/user-photos/jaipur-walks-hero.jpg" alt="Pedals into the heart of pink city" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">3 Hours</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Jaipur</span><span class="journey-lead__title">Pedals into the heart of pink city</span><span class="journey-lead__tagline">Jaipur, before it wakes up</span><span class="journey-lead__meta"><span>3 Hours</span><span class="journey-lead__cta">Explore this day tour <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a></div></div><div class="journeys__panel" role="tabpanel" data-city-panel="jodhpur" hidden><p class="journeys__blurb">Indigo lanes, a century-old market and the side of the city only locals know.</p><div class="journeys__layout journeys__layout--solo"><a class="journey-lead" href="blue-city-walk.html"><img src="assets/user-photos/blue-city-walk-hero.jpg" alt="Blue City Walk" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">2.5 Hours</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Jodhpur</span><span class="journey-lead__title">Blue City Walk</span><span class="journey-lead__tagline">The Jodhpur only locals know</span><span class="journey-lead__meta"><span>2.5 Hours</span><span class="journey-lead__cta">Explore this day tour <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a></div></div></div><div class="journeys__viewall reveal"><a href="day-tours.html" class="btn btn--sage" data-city-link="all">View all day tours</a></div></div></section>
+<section class="section daycities" id="home-day-tours"><div class="container"><div class="journeys__head reveal"><p class="eyebrow">Day Tours</p><h2 class="section-heading journeys__title">Choose Your Path</h2><p class="journeys__sub">A few unhurried hours with a local guide. Pick a city to see what is on.</p></div><div class="journeys__tabs reveal" role="tablist" aria-label="Choose a city"><button type="button" class="journeys__tab is-active" role="tab" aria-selected="true" tabindex="0" data-city-tab="varanasi">Varanasi <span class="journeys__count">7</span></button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-city-tab="jaipur">Jaipur <span class="journeys__count">1</span></button><button type="button" class="journeys__tab" role="tab" aria-selected="false" tabindex="-1" data-city-tab="jodhpur">Jodhpur <span class="journeys__count">1</span></button></div><div class="journeys__panels reveal"><div class="journeys__panel is-active" role="tabpanel" data-city-panel="varanasi"><p class="journeys__blurb">Sunrise on the ghats, silk looms, street food and the Buddha’s first sermon, all in India’s spiritual capital.</p><div class="journeys__layout"><a class="journey-lead" href="subah-e-banaras.html"><img src="assets/user-photos/subah-e-banaras-hero.jpg" alt="Subah E Banaras" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">4 Hours</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Varanasi</span><span class="journey-lead__title">Subah E Banaras</span><span class="journey-lead__tagline">Morning of the Eternal City</span><span class="journey-lead__meta"><span>4 Hours</span><span class="journey-lead__cta">Explore this day tour <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a><div class="journeys__list"><a class="journey-row journey-row--day" href="heritage-spiritual-walk.html"><span class="journey-row__thumb"><img src="assets/user-photos/heritage-spiritual-walk-hero.jpg" alt="Heritage &amp; Spiritual Walk" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Heritage &amp; Spiritual Walk</span><span class="journey-row__tagline">The mystic heart of Varanasi, on foot</span><span class="journey-row__meta">2.5 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="morning-street-walk.html"><span class="journey-row__thumb"><img src="assets/user-photos/morning-street-walk-hero.jpg" alt="Morning Street Walk" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Morning Street Walk</span><span class="journey-row__tagline">Varanasi at its most alive, before the day begins</span><span class="journey-row__meta">2 to 2.5 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="sarnath-walk.html"><span class="journey-row__thumb"><img src="assets/user-photos/sarnath-walk-hero.jpg" alt="Sarnath Excursions" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Sarnath Excursions</span><span class="journey-row__tagline">Where the Buddha First Spoke</span><span class="journey-row__meta">3 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="food-walk-varanasi.html"><span class="journey-row__thumb"><img src="assets/food.jpg" alt="Varanasi Food Tour" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Varanasi Food Tour</span><span class="journey-row__tagline">Taste the Soul of Kashi</span><span class="journey-row__meta">2.5 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="varanasi-silk-walk.html"><span class="journey-row__thumb"><img src="assets/user-photos/varanasi-silk-walk-hero.jpg" alt="Varanasi Silk Walk" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Varanasi Silk Walk</span><span class="journey-row__tagline">Where Gold Meets Thread</span><span class="journey-row__meta">2 Hours</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="journey-row journey-row--day" href="day-sailing-varanasi.html"><span class="journey-row__thumb"><img src="assets/user-photos/sailing-camping-varanasi-boat.jpg" alt="Day Sailing on the Ganges" loading="lazy" /></span><span class="journey-row__text"><span class="journey-row__title">Day Sailing on the Ganges</span><span class="journey-row__tagline">Varanasi to Chunar and back, adrift on a wooden country boat</span><span class="journey-row__meta">Full Day (8–10 Hours)</span></span><span class="journey-row__go"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="journeys__more"><a href="day-tours.html" class="journeys__regionlink" data-city-link="varanasi">See all 7 Varanasi day tours <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="journeys__panel" role="tabpanel" data-city-panel="jaipur" hidden><p class="journeys__blurb">The Pink City, seen from a bicycle before the traffic wakes up.</p><div class="journeys__layout journeys__layout--solo"><a class="journey-lead" href="jaipur-walks.html"><img src="assets/user-photos/jaipur-walks-hero.jpg" alt="Pedals into the heart of pink city" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">3 Hours</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Jaipur</span><span class="journey-lead__title">Pedals into the heart of pink city</span><span class="journey-lead__tagline">Jaipur, before it wakes up</span><span class="journey-lead__meta"><span>3 Hours</span><span class="journey-lead__cta">Explore this day tour <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a></div></div><div class="journeys__panel" role="tabpanel" data-city-panel="jodhpur" hidden><p class="journeys__blurb">Indigo lanes, a century-old market and the side of the city only locals know.</p><div class="journeys__layout journeys__layout--solo"><a class="journey-lead" href="blue-city-walk.html"><img src="assets/user-photos/blue-city-walk-hero.jpg" alt="Blue City Walk" loading="lazy" /><span class="journey-lead__scrim"></span><span class="journey-lead__badge">2.5 Hours</span><span class="journey-lead__body"><span class="journey-lead__eyebrow">Featured &middot; Jodhpur</span><span class="journey-lead__title">Blue City Walk</span><span class="journey-lead__tagline">The Jodhpur only locals know</span><span class="journey-lead__meta"><span>2.5 Hours</span><span class="journey-lead__cta">Explore this day tour <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></a></div></div></div><div class="journeys__viewall reveal"><a href="day-tours.html" class="btn btn--sage" data-city-link="all">View all day tours</a></div></div></section>
 
 <section class="section section--sage-soft">
   <div class="container whychoose">
@@ -4353,7 +4360,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         <span class="destinations-page__filterlabel">Length</span>
         <div class="destinations-page__filters" role="group" aria-label="Filter by length">
           <button class="destinations-page__filter is-active" data-filter="all">Any Length</button>
-          <button class="destinations-page__filter" data-filter="short">Short (2&ndash;4N)</button>
+          <button class="destinations-page__filter" data-filter="short">Short (1&ndash;4N)</button>
           <button class="destinations-page__filter" data-filter="week">Week-Long (5&ndash;9N)</button>
           <button class="destinations-page__filter" data-filter="grand">Grand (10N+)</button>
         </div>
@@ -4439,6 +4446,33 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
             <div class="destination-card__actions">
               <a href="varanasiveritabletour.html" class="btn btn--outline">View Details</a>
               <a href="varanasiveritabletour.html" class="btn btn--orange">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="destination-card" data-tour-card data-nights="1" data-region="spiritual">
+        <div class="destination-card__media">
+          <img src="assets/user-photos/sailing-camping-varanasi-sunrise.jpg" alt="Sailing &amp; Overnight Camping on the Ganges" />
+          <span class="destination-card__badge">1N2D</span>
+        </div>
+        <div class="destination-card__body">
+          <h3 class="destination-card__title">Sailing &amp; Overnight Camping on the Ganges</h3>
+          <p class="destination-card__tagline">Slowly Down the Ganges</p>
+          <p class="destination-card__meta">2 Days / 1 Night &middot; Spiritual India</p>
+          <div class="destination-card__chips">
+            <span class="destination-card__chip">Handcrafted Itinerary</span>
+            <span class="destination-card__chip">Expert Local Guide</span>
+            <span class="destination-card__chip">24/7 Support</span>
+          </div>
+          <div class="destination-card__foot">
+            <div class="destination-card__price">
+              <span class="destination-card__price-label">Pricing</span>
+              <span class="destination-card__price-value">Price on request</span>
+            </div>
+            <div class="destination-card__actions">
+              <a href="sailing-overnight-camping-varanasi.html" class="btn btn--outline">View Details</a>
+              <a href="sailing-overnight-camping-varanasi.html" class="btn btn--orange">Book Now</a>
             </div>
           </div>
         </div>
@@ -5021,14 +5055,14 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
         </div>
       </article>
 
-      <article class="daytour-page-card" id="day-tours-sailing-camping-varanasi" data-tour-card data-city="varanasi">
+      <article class="daytour-page-card" id="day-tours-day-sailing-varanasi" data-tour-card data-city="varanasi">
         <div class="daytour-page-card__media">
-          <img src="assets/user-photos/sailing-camping-varanasi-sunrise.jpg" alt="Sailing &amp; Camping on the Ganges" />
+          <img src="assets/user-photos/sailing-camping-varanasi-boat.jpg" alt="Day Sailing on the Ganges" />
           <span class="daytour-page-card__badge">Full Day (8&ndash;10 Hours)</span>
         </div>
         <div class="daytour-page-card__body">
           <div>
-            <h3 class="daytour-page-card__title">Sailing &amp; Camping on the Ganges</h3>
+            <h3 class="daytour-page-card__title">Day Sailing on the Ganges</h3>
             <p class="daytour-page-card__tagline">Varanasi to Chunar and back, adrift on a wooden country boat</p>
           </div>
           <div class="daytour-page-card__facts">
@@ -5047,7 +5081,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
               <span class="daytour-page-card__price-value daytour-page-card__price-value--muted">Price on request</span>
             </div>
             <div class="daytour-page-card__actions">
-              <a href="sailing-camping-varanasi.html" class="btn btn--outline">View Details</a>
+              <a href="day-sailing-varanasi.html" class="btn btn--outline">View Details</a>
               <a href="#enquire" class="btn btn--orange">Book Now</a>
             </div>
           </div>
@@ -6578,6 +6612,220 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 
 </section>
+<section class="spa-page" id="spa-page-sailing-overnight-camping-varanasi" hidden>
+<section class="tour-hero" id="sailing-overnight-camping-varanasi-hero">
+  <img class="tour-hero__image is-active" data-slide="0" src="assets/user-photos/sailing-camping-varanasi-sunrise.jpg" alt="Sunrise over the Ganges at the campsite" />
+  <img class="tour-hero__image" data-slide="1" src="assets/user-photos/camping-tents-chairs.jpg" alt="Dome tents and chairs on the river sand" />
+  <img class="tour-hero__image" data-slide="2" src="assets/user-photos/camping-tents-sunset.jpg" alt="Sunset over the campsite on the Ganges" />
+  <div class="tour-hero__overlay"></div>
+  <div class="container tour-hero__content">
+    <p class="tour-hero__crumb">Home / Destinations / Sailing &amp; Overnight Camping on the Ganges</p>
+    <p class="tour-hero__eyebrow">Slowly Down the Ganges</p>
+    <h1 class="tour-hero__title">Sailing &amp; Overnight Camping on the Ganges</h1>
+  </div>
+  <button class="hero__arrow hero__arrow--left" id="sailing-overnight-camping-varanasi-hero-prev" aria-label="Previous photo">&#8249;</button>
+  <button class="hero__arrow hero__arrow--right" id="sailing-overnight-camping-varanasi-hero-next" aria-label="Next photo">&#8250;</button>
+  <div class="tour-hero__progress" id="sailing-overnight-camping-varanasi-hero-progress">
+    <button class="tour-hero__progress-item is-active" aria-label="Go to photo 1"></button>
+    <button class="tour-hero__progress-item" aria-label="Go to photo 2"></button>
+    <button class="tour-hero__progress-item" aria-label="Go to photo 3"></button>
+  </div>
+</section>
+<div class="tour-snapshot-wrap">
+  <div class="container">
+    <div class="tour-snapshot reveal is-visible">
+      <div class="tour-snapshot__facts">
+        <div class="tour-snapshot__fact"><span class="tour-snapshot__label">Start</span><span class="tour-snapshot__value">Varanasi</span></div>
+        <div class="tour-snapshot__fact"><span class="tour-snapshot__label">End</span><span class="tour-snapshot__value">Varanasi</span></div>
+        <div class="tour-snapshot__fact"><span class="tour-snapshot__label">Duration</span><span class="tour-snapshot__value">2 Days / 1 Night</span></div>
+        <div class="tour-snapshot__fact"><span class="tour-snapshot__label">Group Size</span><span class="tour-snapshot__value">5 people per boat</span></div>
+        <div class="tour-snapshot__fact"><span class="tour-snapshot__label">Theme</span><span class="tour-snapshot__value">Adventure</span></div>
+      </div>
+      <div class="tour-snapshot__price">
+        <div><span class="tour-snapshot__price-value">Price on request</span></div>
+        <a href="#sailing-overnight-camping-varanasi-enquiry" class="btn btn--orange">Book Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="tour-tabs" id="sailing-overnight-camping-varanasi-tour-tabs">
+  <div class="container tour-tabs__inner">
+    <div class="tour-tabs__items">
+      <button class="tour-tabs__item is-active" data-tab="sailing-overnight-camping-varanasi-overview">Overview</button>
+      <button class="tour-tabs__item" data-tab="sailing-overnight-camping-varanasi-itinerary">Itinerary</button>
+      <button class="tour-tabs__item" data-tab="sailing-overnight-camping-varanasi-inclusions">Inclusions &amp; Exclusions</button>
+      <button class="tour-tabs__item" data-tab="sailing-overnight-camping-varanasi-policy">Cancellation Policy</button>
+    </div>
+    <a href="#sailing-overnight-camping-varanasi-enquiry" class="btn btn--orange tour-tabs__cta">Book Now</a>
+  </div>
+</nav>
+<section class="section tour-overview" id="sailing-overnight-camping-varanasi-overview">
+  <div class="container tour-overview__grid">
+    <div class="tour-overview__photo">
+      <img src="assets/user-photos/camping-tea-morning.jpg" alt="Morning tea at the riverside camp" />
+    </div>
+    <div>
+      <p class="eyebrow">About This Trip</p>
+      <h2 class="tour-overview__heading">Slowly Down the Ganges</h2>
+      <div class="tour-destinations"><h3 class="tour-destinations__heading">Destinations Covered</h3><ul class="tour-destinations__list"><li class="tour-destinations__chip">Varanasi</li><li class="tour-destinations__chip">Bhatauli</li></ul></div>
+      <p class="tour-overview__text">Lose yourself in the spiritual romance of the Ganges on a slow, two-day sail from Bhatauli back to Varanasi. Greet the morning sun, wave to the children along the river bank, and unravel the locals’ chatter drifting across the water. Lounge in your boat as the gentle breeze lulls you to sleep, only to be woken by the aroma of a meal coming from the kitchen boat. Look out for birdlife and, if you are lucky, dolphins.</p><p class="tour-overview__text">Soak in golden sunsets, join the boatmen for a game of cricket, or simply stroll along the riverfront. Dinner is served in the warmth of a campfire, and the night ends in a dome tent on the river bank under a blanket of stars. It is peaceful and exciting, unfathomable yet absorbing, a trip that celebrates a spiritual and cultural legacy as profound as the Ganges itself.</p>
+    </div>
+  </div>
+</section>
+<section class="section section--cream tour-itinerary" id="sailing-overnight-camping-varanasi-itinerary">
+  <div class="container">
+    <div class="tour-itinerary__head">
+      <p class="eyebrow">Day by Day</p>
+      <h2 class="section-heading">Your 2-Day Itinerary</h2>
+    </div>
+    <div class="tour-itinerary__list" id="sailing-overnight-camping-varanasi-itinerary-list">
+      <article class="itinerary-item is-open">
+        <button class="itinerary-item__head">
+          <span class="itinerary-item__day">Day 1</span>
+          <span class="itinerary-item__titles">
+            <span class="itinerary-item__title">Varanasi to Bhatauli</span>
+            <span class="itinerary-item__subtitle">Onto the River</span>
+          </span>
+          <span class="itinerary-item__chevron">&#8250;</span>
+        </button>
+        <div class="itinerary-item__body">
+          <div class="itinerary-item__body-inner">
+            <div>
+              <img src="assets/user-photos/camping-guests-boat.jpg" alt="Guests welcomed aboard with marigold garlands" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
+              <div class="itinerary-item__copy">
+                <p>Your representative picks you up from your hotel, Varanasi railway station or the airport for the drive to Bhatauli, the sailing start point, around 40 km and 1.5 hours away. Sailing begins around midday with a full support crew, including a kitchen boat, and lunch is served aboard. Depending on the wind, you sail for around five to six hours before the boats are moored for the night on the river bank. Spend the evening playing volleyball or cricket or strolling along the river. Dinner is served at the campsite, and the night is spent in dome tents on a twin-sharing basis.</p>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Lunch</span><span class="itinerary-item__meal">Dinner</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="itinerary-item">
+        <button class="itinerary-item__head">
+          <span class="itinerary-item__day">Day 2</span>
+          <span class="itinerary-item__titles">
+            <span class="itinerary-item__title">Sailing Back to Varanasi</span>
+            <span class="itinerary-item__subtitle">Sunrise, Village Life &amp; the Return</span>
+          </span>
+          <span class="itinerary-item__chevron">&#8250;</span>
+        </button>
+        <div class="itinerary-item__body">
+          <div class="itinerary-item__body-inner">
+            <div>
+              <img src="assets/user-photos/sailing-camping-varanasi-sunrise.jpg" alt="Sunrise over the Ganges at the campsite" style="aspect-ratio:3/2;border-radius:10px;object-fit:cover;width:100%;height:100%;" />
+              <div class="itinerary-item__copy">
+                <p>Wake to the sunrise with a cup of piping-hot chai or coffee. After breakfast, sailing resumes for around six to seven hours. If the wind is favourable, you stop to visit a local village and a government-run primary school, a chance to see rural life and meet the locals. Back on the boats, lunch is served aboard, and you are likely to reach Varanasi around 2:30 pm. The trip ends with disembarkation at Vishwasundari Bridge in Varanasi.</p>
+                <div class="itinerary-item__meals"><span class="itinerary-item__meal">Breakfast</span><span class="itinerary-item__meal">Lunch</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section tour-inclusions" id="sailing-overnight-camping-varanasi-inclusions">
+  <div class="container tour-inclusions__grid">
+    <div>
+      <p class="eyebrow">What's Included</p>
+      <h2 class="section-heading">Inclusions</h2>
+      <ul class="tour-inclusions__list">
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>1 Night Accommodation</strong><span class="tour-inclusions__detail">Overnight camping in waterproof dome tents on a twin-sharing basis, with mattresses, pillows and blankets.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Meals</strong><span class="tour-inclusions__detail">1 breakfast, 2 lunches and 1 dinner (vegetarian only), plus tea or coffee with light snacks midway.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Arrival Transfer</strong><span class="tour-inclusions__detail">From your Varanasi hotel, railway station or airport to the sailing start point.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Sailing &amp; Support Crew</strong><span class="tour-inclusions__detail">1 night and 2 days of sailing with a full support crew, including a kitchen boat, led by an experienced boat crew leader who speaks basic English.</span></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M6 10.5l2.4 2.4L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Village &amp; School Visit</strong><span class="tour-inclusions__detail">A visit to a local village and a government-run primary school, subject to time and wind.</span></span></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Not Included</p>
+      <h2 class="section-heading">Exclusions</h2>
+      <ul class="tour-inclusions__list">
+        <li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Airfare</strong></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Mineral water and soft drinks</strong></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Travel insurance</strong></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Breakfast on Day 1</strong></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>A room to freshen up on Day 1 if you arrive in Varanasi the same day</strong></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Tips to boatmen</strong></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Entrance and monument fees</strong></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Departure transfer from the drop-off point to the railway station or airport</strong></span></li><li><span class="tour-inclusions__icon tour-inclusions__icon--no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M7.2 7.2l5.6 5.6M12.8 7.2l-5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Anything not mentioned under inclusions</strong></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section tour-policy" id="sailing-overnight-camping-varanasi-goodtoknow">
+  <div class="container">
+    <div class="tour-policy__head">
+      <p class="eyebrow">On the River</p>
+      <h2 class="section-heading">Boats, Camp &amp; Good to Know</h2>
+    </div>
+    <ul class="tour-policy__notes">
+      <li><strong>The boats.</strong> They are rowed or sailed depending on the wind, and each carries up to 5 guests plus 2 boatmen. They are covered from the top and open at the sides for views of river life, with mattresses, pillows and blankets to lounge on. Your luggage stays with you in a separate area, and every boat carries life jackets and a first-aid kit.</li><li><strong>The camp.</strong> Waterproof dome tents on a twin-sharing basis, each guest with a mattress, quilt or blanket and pillow. A dining tent goes up if bugs appear in the evening (they are seasonal). A shared toilet tent with a dig-in pit and a western commode is set up at a distance; bush toilets are used while sailing.</li><li><strong>The kitchen boat.</strong> Fresh vegetarian food prepared with produce from local villages and filtered water. No Ganges water is used for cooking.</li><li><strong>Good to know.</strong> There are no showers while sailing, no electricity on the river (charge your devices beforehand), and no meat or alcohol, as the Ganges is a holy river. Mobile networks work well; an Indian SIM is recommended. Mineral water and soft drinks are available at an extra charge.</li><li><strong>What to carry.</strong> Mosquito repellent, moisturiser, sunscreen, tissue paper, a torch, a camera with spare batteries and memory cards, and any medicines you take.</li>
+    </ul>
+  </div>
+</section>
+<section class="section section--cream tour-policy" id="sailing-overnight-camping-varanasi-policy">
+  <div class="container">
+    <div class="tour-policy__head">
+      <p class="eyebrow">Fine Print</p>
+      <h2 class="section-heading">Cancellation Policy</h2>
+    </div>
+    <div class="tour-policy__timeline">
+      <div class="tour-policy__row"><span class="tour-policy__dot"></span><span class="tour-policy__label">At booking</span><span class="tour-policy__detail">10% deposit due; balance 90% due 10 days before departure.</span></div>
+      <div class="tour-policy__row"><span class="tour-policy__dot"></span><span class="tour-policy__label">Within 10 days of departure</span><span class="tour-policy__detail">100% payable upfront.</span></div>
+      <div class="tour-policy__row"><span class="tour-policy__dot"></span><span class="tour-policy__label">30+ days before departure</span><span class="tour-policy__detail">The 10% deposit is retained as a non-refundable fee.</span></div>
+      <div class="tour-policy__row"><span class="tour-policy__dot"></span><span class="tour-policy__label">15–29 days before departure</span><span class="tour-policy__detail">30% of the total cost is charged.</span></div>
+      <div class="tour-policy__row"><span class="tour-policy__dot"></span><span class="tour-policy__label">10–14 days before departure</span><span class="tour-policy__detail">50% of the total cost is charged.</span></div>
+      <div class="tour-policy__row"><span class="tour-policy__dot"></span><span class="tour-policy__label">Under 10 days / no-show</span><span class="tour-policy__detail">100% charged — no refund.</span></div>
+      <div class="tour-policy__row"><span class="tour-policy__dot"></span><span class="tour-policy__label">Peak season (Dec 20 – Jan 10, major festivals)</span><span class="tour-policy__detail">100% non-refundable.</span></div>
+    </div>
+    <ul class="tour-policy__notes">
+      <li>Flight and train tickets are subject to the airline&rsquo;s or railway&rsquo;s own change/cancellation fees.</li>
+      <li>No partial refunds are made for services left unused mid-trip.</li>
+      <li>Approved refunds are processed within 10–14 business days.</li>
+    </ul>
+  </div>
+</section>
+<section class="section tour-enquiry" id="sailing-overnight-camping-varanasi-enquiry">
+  <div class="container tour-enquiry__grid">
+    <div class="reveal is-visible">
+      <p class="eyebrow">Make It Yours</p>
+      <h2 class="section-heading">Customize This Trip</h2>
+      <p class="tour-enquiry__lead">Tell us your dates and interests and we'll tailor the Sailing &amp; Overnight Camping on the Ganges itinerary around you — different pace, private boats, private departures.</p>
+    </div>
+    <form class="tour-enquiry__form reveal is-visible">
+      <div class="tour-enquiry__row">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="tel" name="phone" placeholder="Phone number" />
+      </div>
+      <div class="tour-enquiry__row">
+        <input type="email" name="email" placeholder="Your email" required />
+        <input type="date" name="arrival" />
+      </div>
+      <input type="number" name="people" min="1" placeholder="Number of people" required />
+      <input type="text" name="places" placeholder="Places you want to cover" />
+      <textarea name="request" placeholder="Any specific request" rows="3"></textarea>
+      <button type="submit" class="btn btn--orange">Enquire Now</button>
+    </form>
+  </div>
+</section>
+<section class="section section--cream tour-related">
+  <div class="container">
+    <div class="tour-related__head">
+      <p class="eyebrow">Keep Exploring</p>
+      <h2 class="section-heading">More Tours</h2>
+    </div>
+    <div class="tour-related__grid">
+      <article class="tour-related__card">
+        <div class="tour-related__media"><img src="assets/user-photos/varanasiveritabletour-hero1.jpg" alt="Varanasi Veritable Tour" /><span class="tour-related__badge">3N4D</span></div>
+        <div class="tour-related__body"><p class="tour-related__title">Varanasi Veritable Tour</p><a href="varanasiveritabletour.html" class="btn btn--outline tour-related__cta">Discover More</a></div>
+      </article>
+      <article class="tour-related__card">
+        <div class="tour-related__media"><img src="assets/user-photos/best-of-north-india-hero1.jpg" alt="Best of North India" /><span class="tour-related__badge">12N13D</span></div>
+        <div class="tour-related__body"><p class="tour-related__title">Best of North India</p><a href="best-of-north-india.html" class="btn btn--outline tour-related__cta">Discover More</a></div>
+      </article>
+      <article class="tour-related__card">
+        <div class="tour-related__media"><img src="assets/user-photos/lucknow-to-bodhgaya-hero1.jpg" alt="Lucknow to Bodhgaya" /><span class="tour-related__badge">7N8D</span></div>
+        <div class="tour-related__body"><p class="tour-related__title">Lucknow to Bodhgaya</p><a href="lucknow-to-bodhgaya.html" class="btn btn--outline tour-related__cta">Discover More</a></div>
+      </article>
+      <article class="tour-related__card">
+        <div class="tour-related__media"><img src="assets/user-photos/kerala-tour-hero1.jpg" alt="Kerala Tour" /><span class="tour-related__badge">9N10D</span></div>
+        <div class="tour-related__body"><p class="tour-related__title">Kerala Tour</p><a href="kerala-tour.html" class="btn btn--outline tour-related__cta">Discover More</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+</section>
+
 <section class="spa-page" id="spa-page-lucknow-to-bodhgaya" hidden>
 
 
@@ -11257,7 +11505,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 <section class="section daytour-intro">
   <div class="container daytour-intro__grid">
     <div class="daytour-intro__photo reveal is-visible">
-      <img src="assets/user-photos/sarnath-walk-intro.jpg" alt="Sarnath Excursions" />
+      <img src="assets/user-photos/sarnath-walk-dhamek.jpg" alt="Sarnath Excursions" />
     </div>
     <div class="reveal is-visible">
       <p class="eyebrow">About This Experience</p>
@@ -11676,15 +11924,15 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 
 </section>
-<section class="spa-page" id="spa-page-sailing-camping-varanasi" hidden>
+<section class="spa-page" id="spa-page-day-sailing-varanasi" hidden>
 
 
-<section class="daytour-hero" style="background-image:url('assets/user-photos/sailing-camping-varanasi-sunrise.jpg')">
+<section class="daytour-hero" style="background-image:url('assets/user-photos/sailing-camping-varanasi-boat.jpg')">
   <div class="daytour-hero__overlay"></div>
   <div class="container daytour-hero__content">
-    <p class="daytour-hero__crumb">Home / Day Tours / Sailing & Camping on the Ganges</p>
-    <p class="daytour-hero__eyebrow">Varanasi · Sailing & Camping</p>
-    <h1 class="daytour-hero__title">Sailing & Camping on the Ganges</h1>
+    <p class="daytour-hero__crumb">Home / Day Tours / Day Sailing on the Ganges</p>
+    <p class="daytour-hero__eyebrow">Varanasi · Day Sailing</p>
+    <h1 class="daytour-hero__title">Day Sailing on the Ganges</h1>
     <p class="daytour-hero__tagline">Varanasi to Chunar and back, adrift on a wooden country boat</p>
     <div class="daytour-hero__stats">
       <div class="daytour-hero__stat"><span class="daytour-hero__stat-label">Duration</span><span class="daytour-hero__stat-value">Full Day (8–10 Hours)</span></div>
@@ -11713,11 +11961,11 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 <section class="section daytour-intro">
   <div class="container daytour-intro__grid">
     <div class="daytour-intro__photo reveal is-visible">
-      <img src="assets/user-photos/sailing-camping-varanasi-boat.jpg" alt="Sailing & Camping on the Ganges" />
+      <img src="assets/user-photos/river-kids.jpg" alt="Day Sailing on the Ganges" />
     </div>
     <div class="reveal is-visible">
       <p class="eyebrow">About This Experience</p>
-      <h2 class="daytour-intro__heading">Sailing & Camping on the Ganges</h2>
+      <h2 class="daytour-intro__heading">Day Sailing on the Ganges</h2>
       <p class="daytour-intro__text">The Ganges has carried pilgrims, empires, and everyday river life for millennia, and this full-day sail covers one of its most scenic stretches — the run between Varanasi and the fortified hilltop town of Chunar. Aboard a traditional wooden country boat, with a boatman crew, a mattress-and-pillow sitting area under a canvas roof, and time to watch migratory birds and the occasional Gangetic dolphin surface alongside.</p><p class="daytour-intro__text">The day starts with a hotel freshen-up and breakfast before the drive out to Chunar, where a traditional garland and welcome drink mark the start of the sail. Lunch is served on board, evening tea comes with a stop on a river island, and the boat drifts back into Varanasi as the light fades — eight to ten unhurried hours on one of the river’s oldest-travelled stretches.</p>
     </div>
   </div>
@@ -11770,7 +12018,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   <div class="container daytour-cta__inner">
     <div class="reveal is-visible">
       <p class="eyebrow">Ready When You Are</p>
-      <h2 class="daytour-cta__title">Sailing & Camping on the Ganges &mdash; Price on Request</h2>
+      <h2 class="daytour-cta__title">Day Sailing on the Ganges &mdash; Price on Request</h2>
       <p class="daytour-cta__text">Full Day (8–10 Hours) · 4 people per boat</p>
     </div>
     <a href="#enquire" class="btn btn--orange daytour-cta__btn">Book Now</a>
@@ -11874,7 +12122,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
       <h2 class="section-heading">More From Varanasi</h2>
     </div>
     <div class="daytour-related__grid">
-      <article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/food.jpg" alt="Varanasi Food Tour" /><span class="daytour-related-card__badge">2.5 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Varanasi Food Tour</p><a href="food-walk-varanasi.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/subah-e-banaras-hero.jpg" alt="Subah E Banaras" /><span class="daytour-related-card__badge">4 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Subah E Banaras</p><a href="subah-e-banaras.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/sailing-camping-varanasi-sunrise.jpg" alt="Sailing & Camping on the Ganges" /><span class="daytour-related-card__badge">Full Day (8–10 Hours)</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Sailing & Camping on the Ganges</p><a href="sailing-camping-varanasi.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article>
+      <article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/food.jpg" alt="Varanasi Food Tour" /><span class="daytour-related-card__badge">2.5 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Varanasi Food Tour</p><a href="food-walk-varanasi.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/subah-e-banaras-hero.jpg" alt="Subah E Banaras" /><span class="daytour-related-card__badge">4 Hours</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Subah E Banaras</p><a href="subah-e-banaras.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article><article class="daytour-related-card"><div class="daytour-related-card__media"><img src="assets/user-photos/sailing-camping-varanasi-boat.jpg" alt="Day Sailing on the Ganges" /><span class="daytour-related-card__badge">Full Day (8–10 Hours)</span></div><div class="daytour-related-card__body"><p class="daytour-related-card__title">Day Sailing on the Ganges</p><a href="day-sailing-varanasi.html" class="btn btn--outline daytour-related-card__cta">Discover More</a></div></article>
     </div>
   </div>
 </section>
@@ -11922,7 +12170,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 
 <script>
 (function () {
-  var ROUTES = {"index.html": "home", "./": "home", "": "home", "homepage.html": "home", "destinations.html": "destinations", "day-tours.html": "day-tours", "kerala-tour.html": "kerala-tour", "indias-golden-triangle.html": "indias-golden-triangle", "best-of-north-india.html": "best-of-north-india", "varanasiveritabletour.html": "varanasiveritabletour", "lucknow-to-bodhgaya.html": "lucknow-to-bodhgaya", "spiti-valley-adventure.html": "spiti-valley-adventure", "a-bit-of-north-and-south.html": "a-bit-of-north-and-south", "southern-splendors.html": "southern-splendors", "by-road-through-high-passes.html": "by-road-through-high-passes", "golden-triangle-rustic-rajasthan.html": "golden-triangle-rustic-rajasthan", "the-temple-run.html": "the-temple-run", "heavenly-himalayas.html": "heavenly-himalayas", "heritage-streets.html": "heritage-streets", "golden-triangle-roaring-ranthambhore.html": "golden-triangle-roaring-ranthambhore", "jaipur-walks.html": "jaipur-walks", "food-walk-varanasi.html": "food-walk-varanasi", "varanasi-silk-walk.html": "varanasi-silk-walk", "subah-e-banaras.html": "subah-e-banaras", "sarnath-walk.html": "sarnath-walk", "blue-city-walk.html": "blue-city-walk", "heritage-spiritual-walk.html": "heritage-spiritual-walk", "morning-street-walk.html": "morning-street-walk", "sailing-camping-varanasi.html": "sailing-camping-varanasi", "blog.html": "blog"};
+  var ROUTES = {"index.html": "home", "./": "home", "": "home", "homepage.html": "home", "destinations.html": "destinations", "day-tours.html": "day-tours", "kerala-tour.html": "kerala-tour", "indias-golden-triangle.html": "indias-golden-triangle", "best-of-north-india.html": "best-of-north-india", "varanasiveritabletour.html": "varanasiveritabletour", "lucknow-to-bodhgaya.html": "lucknow-to-bodhgaya", "spiti-valley-adventure.html": "spiti-valley-adventure", "a-bit-of-north-and-south.html": "a-bit-of-north-and-south", "southern-splendors.html": "southern-splendors", "by-road-through-high-passes.html": "by-road-through-high-passes", "golden-triangle-rustic-rajasthan.html": "golden-triangle-rustic-rajasthan", "the-temple-run.html": "the-temple-run", "heavenly-himalayas.html": "heavenly-himalayas", "heritage-streets.html": "heritage-streets", "golden-triangle-roaring-ranthambhore.html": "golden-triangle-roaring-ranthambhore", "jaipur-walks.html": "jaipur-walks", "food-walk-varanasi.html": "food-walk-varanasi", "varanasi-silk-walk.html": "varanasi-silk-walk", "subah-e-banaras.html": "subah-e-banaras", "sarnath-walk.html": "sarnath-walk", "blue-city-walk.html": "blue-city-walk", "heritage-spiritual-walk.html": "heritage-spiritual-walk", "morning-street-walk.html": "morning-street-walk", "day-sailing-varanasi.html": "day-sailing-varanasi", "sailing-camping-varanasi.html": "day-sailing-varanasi", "sailing-overnight-camping-varanasi.html": "sailing-overnight-camping-varanasi", "blog.html": "blog"};
   var VALID = {};
   Object.keys(ROUTES).forEach(function (k) { VALID[ROUTES[k]] = true; });
 
@@ -12381,7 +12629,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   // Region + length filters (combined)
   var filterTests = {
     all: function () { return true; },
-    short: function (n) { return n >= 2 && n <= 4; },
+    short: function (n) { return n >= 1 && n <= 4; },
     week: function (n) { return n >= 5 && n <= 9; },
     grand: function (n) { return n >= 10; },
   };
@@ -12797,6 +13045,94 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
   // Sticky tabs: click-to-scroll + scrollspy
   var tabButtons = root.querySelectorAll('.tour-tabs__item');
   var sections = ['varanasiveritabletour-overview', 'varanasiveritabletour-itinerary', 'varanasiveritabletour-inclusions', 'varanasiveritabletour-policy'].map(function (id) { return document.getElementById(id); });
+  tabButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.dataset.tab);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        tabButtons.forEach(function (b) { b.classList.toggle('is-active', b.dataset.tab === entry.target.id); });
+      }
+    });
+  }, { rootMargin: '-120px 0px -60% 0px', threshold: 0 });
+  sections.forEach(function (s) { if (s) spy.observe(s); });
+
+  // Itinerary accordion
+  root.querySelectorAll('.itinerary-item__head').forEach(function (head) {
+    head.addEventListener('click', function () {
+      head.closest('.itinerary-item').classList.toggle('is-open');
+    });
+  });
+
+  // Enquiry form — routes every submission to info@tournivaljourneys.com
+  // via the visitor's own mail client, so all enquiries land in one inbox.
+  root.querySelectorAll('form.tour-enquiry__form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var name = f['name'] ? f['name'].value : '';
+      var phone = f['phone'] ? f['phone'].value : '';
+      var email = f['email'] ? f['email'].value : '';
+      var arrival = f['arrival'] ? f['arrival'].value : '';
+      var people = f['people'] ? f['people'].value : '';
+      var places = f['places'] ? f['places'].value : '';
+      var request = f['request'] ? f['request'].value : '';
+      var subject = 'New tour enquiry from ' + name;
+      var body = [
+        'Name: ' + name,
+        'Phone: ' + phone,
+        'Email: ' + email,
+        'Arrival date: ' + arrival,
+        'Number of people: ' + people,
+        'Places to cover: ' + places,
+        '',
+        'Request: ' + request
+      ].join('\n');
+      window.location.href = 'mailto:info@tournivaljourneys.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var btn = form.querySelector('button');
+      if (btn) btn.textContent = 'Thank you!';
+    });
+  });
+})();
+
+})();
+
+</script>
+<script>
+(function(){
+  var root = document.getElementById('spa-page-sailing-overnight-camping-varanasi');
+  if (!root) return;
+
+(function () {
+
+  // Hero crossfade
+  var slides = root.querySelectorAll('.tour-hero__image');
+  var progressItems = root.querySelectorAll('#sailing-overnight-camping-varanasi-hero-progress .tour-hero__progress-item');
+  var heroIdx = 0;
+  var heroTimer = null;
+  function startHeroTimer() {
+    clearInterval(heroTimer);
+    heroTimer = setInterval(function () { goToSlide(heroIdx + 1); }, 5000);
+  }
+  function goToSlide(i) {
+    heroIdx = (i + slides.length) % slides.length;
+    slides.forEach(function (s, idx) { s.classList.toggle('is-active', idx === heroIdx); });
+    progressItems.forEach(function (p, idx) { p.classList.toggle('is-active', idx === heroIdx); });
+    startHeroTimer();
+  }
+  progressItems.forEach(function (p, idx) { p.addEventListener('click', function () { goToSlide(idx); }); });
+  var heroPrevBtn = document.getElementById('sailing-overnight-camping-varanasi-hero-prev');
+  var heroNextBtn = document.getElementById('sailing-overnight-camping-varanasi-hero-next');
+  if (heroPrevBtn) heroPrevBtn.addEventListener('click', function () { goToSlide(heroIdx - 1); });
+  if (heroNextBtn) heroNextBtn.addEventListener('click', function () { goToSlide(heroIdx + 1); });
+  startHeroTimer();
+
+  // Sticky tabs: click-to-scroll + scrollspy
+  var tabButtons = root.querySelectorAll('.tour-tabs__item');
+  var sections = ['sailing-overnight-camping-varanasi-overview', 'sailing-overnight-camping-varanasi-itinerary', 'sailing-overnight-camping-varanasi-inclusions', 'sailing-overnight-camping-varanasi-policy'].map(function (id) { return document.getElementById(id); });
   tabButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var target = document.getElementById(btn.dataset.tab);
@@ -13951,7 +14287,7 @@ body { background: var(--color-cream, #f8f7f2); margin: 0; }
 </script>
 <script>
 (function(){
-  var root = document.getElementById('spa-page-sailing-camping-varanasi');
+  var root = document.getElementById('spa-page-day-sailing-varanasi');
   if (!root) return;
 
 (function () {
